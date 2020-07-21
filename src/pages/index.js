@@ -1,13 +1,14 @@
 import React from 'react';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import Header from '../sections/header';
+import { Layout } from '../components';
+import { Main } from '../styles';
+import { Hero } from '../sections';
 
 const IndexPage = () => (
-  <Layout>
-	<SEO title="Home" />
-	<Header />
-  </Layout>
+	<Layout>
+		<Main>
+			<Hero headline='Hello!' description="I'm Mohammed Esafi, a software engineer based in Boston, MA." />
+		</Main>
+	</Layout>
 )
 
 export default IndexPage;

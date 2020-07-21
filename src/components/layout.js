@@ -1,13 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GlobalStyle } from '../styles';
+import { SEO, Navigation } from '.';
+import { Global as GlobalStyle } from '../styles';
 
 const Layout = ({ children }) => {
   return (
-    <React.Fragment>
-      <GlobalStyle />
-      {children}
-    </React.Fragment>
+    <div id="root">
+    	<SEO title="Home" />
+  		<GlobalStyle />
+  		<Navigation />
+  		{children}
+  		<footer>
+        © {new Date().getFullYear()}, Built with
+        {` `}
+        <a href="https://www.gatsbyjs.org">Gatsby</a>
+      </footer>
+    </div>
   )
 }
 

@@ -1,4 +1,9 @@
 export { default as theme } from './theme';
-export { default as GlobalStyle } from './GlobalStyle';
-export { default as Header } from './Header';
-export { default as Button } from './Button';
+export { default as media } from './media';
+export { default as Global } from './global';
+export { default as Header } from './header';
+export { default as Button } from './button';
+export { default as Flex } from './flex';
+export { default as Main } from './main';
+export { default as Section } from './section';
+export { default as Glitch } from './glitch';
