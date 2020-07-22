@@ -1,6 +1,6 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
-import { Section, Glitch, theme } from '../styles';
+import styled from 'styled-components';
+import { Section, theme } from '../styles';
 
 const { colors } = theme;
 
@@ -17,29 +17,7 @@ const Headline = styled.h1`
 	color: ${colors.slate};
 	font-size: 12rem;
 	margin: 0px;
-
-	&:before,
-	&:after {
-		content: attr(data-text);
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
-
-	&:before {
-		left: -1px;
-		background: ${colors.background};
-		animation: ${Glitch} 15s infinite linear alternate-reverse;
-	}
-
-	&:after {
-		left: 1px;
-		background: ${colors.background};
-		text-shadow: 2px 0 #64FFDA;
-		animation: ${Glitch} 2s infinite linear alternate-reverse;
-	}
+	text-shadow: 2px 0px ${colors.accent};
 `
 
 const Description = styled.p`

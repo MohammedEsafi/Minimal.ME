@@ -6,4 +6,4 @@ export { default as Button } from './button';
 export { default as Flex } from './flex';
 export { default as Main } from './main';
 export { default as Section } from './section';
-export { default as Glitch } from './glitch';
+export { default as SVG } from './svg';

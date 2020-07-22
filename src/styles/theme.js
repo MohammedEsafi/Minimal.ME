@@ -1,11 +1,10 @@
 const theme = {
 	colors: {
 		background: '#020c1b',
-		onbackground: 'rgb(136, 146, 176)',
-		accent: '#64ffda',
-		onsurface: 'rgb(204, 214, 246)',
-		slate: '#e8eddf',
-		hover: '#000',
+		onbackground: '#D5DDF8', // body ccd6f6
+		accent: '#64ffda', // sucondary
+		slate: '#e8eddf', // white
+		hover: 'rgba(100, 255, 218, 0.07)',
 	},
 
 	fonts: {

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { Button, Flex, theme } from '../styles';
+import Icons from '../icons'
 import { navLinks } from '../config'
 
 const { colors, transition } = theme;
@@ -26,25 +27,33 @@ const ListItem = styled.li`
 
 const ListLink = styled.a`
   padding: 12px 10px;
-  color: ${colors.slate};
   transition: ${transition};
 `
 
-const Menu = () => (
-	<Flex alignItems='center' gap='12px' >
-		<OrderedList>
-			{navLinks.map(({name, url}) => (
-				<ListItem>
-					<ListLink href={url}>
-						{name}
-					</ListLink>
-				</ListItem>
-			))}
-		</OrderedList>
-		<Button>
-			<a href='/resume.pdf' target='_blank'>CV</a>
-		</Button>
-	</Flex>
-)
+const Menu = () => {
+
+	useEffect(() => {
+		console.log("NONE"); //"Icons: \n" + "Icons" + "\nEND"
+	});
+
+	return (
+		<Flex alignItems='center' gap='12px' >
+			<OrderedList>
+				{navLinks.map(({name, url}, index) => (
+					<ListItem key={index} >
+						<ListLink href={url}>
+							{name}
+						</ListLink>
+					</ListItem>
+				))}
+			</OrderedList>
+			<Button paddingInline='0.5rem' paddingBlock='0.5rem' >
+				<a href='/resume.pdf' target='_blank'>
+					<Icons.document fill={colors.accent} side='2rem' />
+				</a>
+			</Button>
+		</Flex>
+	);
+}
 
 export default Menu;
