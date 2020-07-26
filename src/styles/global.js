@@ -27,7 +27,7 @@ const Global = createGlobalStyle`
 		overflow-x: hidden;
 		background-color: ${colors.background};
 		color: ${colors.onbackground};
-		line-height: 1;
+		line-height: 1.6;
 		font-family: ${fonts.primary};
 		
 	}
@@ -38,6 +38,7 @@ const Global = createGlobalStyle`
 		text-decoration-skip-ink: auto;
 		color: inherit;
 		cursor: pointer;
+		padding: 10px;
 
 		&:hover,
 		&:focus {

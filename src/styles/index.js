@@ -4,6 +4,7 @@ export { default as Global } from './global';
 export { default as Header } from './header';
 export { default as Button } from './button';
 export { default as Flex } from './flex';
+export { default as Grid } from './grid';
 export { default as Main } from './main';
 export { default as Section } from './section';
 export { default as SVG } from './svg';

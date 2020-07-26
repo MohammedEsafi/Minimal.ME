@@ -4,8 +4,12 @@ import Img from 'gatsby-image';
 import styled from 'styled-components';
 
 const StyledImage = styled(Img)`
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
+`
+
+const Link = styled.a`
+  padding: 0;
 `
 
 /*
@@ -33,9 +37,9 @@ const Image = () => {
   `)
 
   return (
-    <a href='/#'>
+    <Link href='/#'>
       <StyledImage fluid={data.placeholderImage.childImageSharp.fluid} />
-    </a>
+    </Link>
   )
 }
 

@@ -17,11 +17,12 @@ const Headline = styled.h1`
 	color: ${colors.slate};
 	font-size: 12rem;
 	margin: 0px;
+	line-height: 1.1;
 	text-shadow: 2px 0px ${colors.accent};
 `
 
 const Description = styled.p`
-	font-size: 1.6rem;
+	font-size: 2rem;
 	margin: 0px;
 	color: ${colors.slate};
 `

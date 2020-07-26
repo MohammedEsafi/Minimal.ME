@@ -1,17 +1,24 @@
 import styled from 'styled-components';
+import theme from './theme';
 
-const SVG = styled.svg.attrs({ 
-	version: '1.1', 
-	xmlns: 'http://www.w3.org/2000/svg', 
-	xmlnsXlink: 'http://www.w3.org/1999/xlink',
+const { colors } = theme;
+
+const SVG = styled.svg.attrs({
+	xmlns: 'http://www.w3.org/2000/svg',
+	role: 'img',
 })`
 	fill: ${props => props.fill};
 	width: ${props => props.side}; 
-	height: ${props => props.side}; 
+	height: ${props => props.side};
+
+	&:hover,
+	&:focus {
+		fill: ${colors.accent};
+	}
 `
 
 SVG.defaultProps = {
-	fill: '#CCCCCC',
+	fill: colors.onbackground,
 	side: '1.6rem',
 }
 

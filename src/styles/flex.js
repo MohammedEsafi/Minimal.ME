@@ -7,6 +7,7 @@ const Flex = styled.div`
 	gap: ${props => props.gap};
 	justify-content: ${props => props.justifyContent};
 	flex-direction: ${props => props.flexDirection};
+	${props => props?.addCSS}
 `
 
 Flex.defaultProps = {

@@ -13,7 +13,7 @@ const Button = styled.button`
 	outline: none;
 
 	& > a {
-		padding: ${props => props.paddingInline} ${props => props.paddingBlock};
+		padding: ${props => props.paddingBlock} ${props => props.paddingInline};
 		width: ${props => props.width};
 		height: ${props => props.height};
 		border-radius: ${borderRadius};

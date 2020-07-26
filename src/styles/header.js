@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import theme from './theme';
 
-const { navHeight, fonts } = theme;
+const { colors, navHeight, fonts } = theme;
 
 const Header = styled.header`
 	width: 100%;
@@ -10,8 +10,10 @@ const Header = styled.header`
 	justify-content: space-between;
 	padding: 0px 50px;
 	position: fixed;
+	z-index: 20;
 	height: ${navHeight};
 	font-family: ${fonts.secondary};
+	background-color: ${colors.background};
 `;
 
 export default Header;

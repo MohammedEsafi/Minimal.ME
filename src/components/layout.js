@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SEO, Navigation } from '.';
+import { SEO, Navigation, Social, Scroll } from '.';
 import { Global as GlobalStyle } from '../styles';
 
 const Layout = ({ children }) => {
@@ -9,6 +9,8 @@ const Layout = ({ children }) => {
     	<SEO title="Home" />
   		<GlobalStyle />
   		<Navigation />
+      <Social />
+      <Scroll />
   		{children}
   		<footer>
         © {new Date().getFullYear()}, Built with

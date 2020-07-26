@@ -14,7 +14,7 @@ const OrderedList = styled.ol`
 `
 
 const ListItem = styled.li`
-	font-size: 1.3rem;
+	font-size: 1.4rem;
   margin: 0px 10px;
   counter-increment: item-counter;
   list-style: none;
@@ -47,9 +47,9 @@ const Menu = () => {
 					</ListItem>
 				))}
 			</OrderedList>
-			<Button paddingInline='0.5rem' paddingBlock='0.5rem' >
+			<Button paddingBlock='1.7rem' paddingInline='1.2rem' >
 				<a href='/resume.pdf' target='_blank'>
-					<Icons.document fill={colors.accent} side='2rem' />
+					RESUME
 				</a>
 			</Button>
 		</Flex>
