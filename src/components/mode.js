@@ -15,7 +15,7 @@ const Mode = () => {
 		} else {
 			setMode(localMode)
 		}
-	})
+	}, [])
 
 	const toggleMode = () => {
 		if (mode === 'light') {

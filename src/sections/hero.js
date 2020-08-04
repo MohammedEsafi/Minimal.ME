@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { theme, Section } from '../styles';
 
 const { fonts } = theme;
@@ -32,5 +33,10 @@ const Hero = ({ headline, description }) => (
 		<Description dangerouslySetInnerHTML={{ __html: description }} />
 	</Container>
 )
+
+Hero.propTypes = {
+	headline: PropTypes.string.isRequired,
+	description: PropTypes.string.isRequired,
+}
 
 export default Hero;

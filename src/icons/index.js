@@ -4,6 +4,7 @@ import Github from './github';
 import Linkedin from './linkedin';
 import Twitter from './twitter';
 import Dribbble from './dribbble';
+import Arrow from './arrow';
 
 const Icons = ({ name, fill, side, addCSS }) => {
 	const props = { fill, side, addCSS };
@@ -17,8 +18,10 @@ const Icons = ({ name, fill, side, addCSS }) => {
 			return <Twitter { ...props } />;
 		case 'dribbble':
 			return <Dribbble { ...props } />;
+		case 'down-arrow':
+			return <Arrow.down { ...props } />;
 		default:
-			return <Github { ...props } />;
+			return null;
 	}
 }
 

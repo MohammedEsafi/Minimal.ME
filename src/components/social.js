@@ -9,7 +9,7 @@ const Social = () => (
 		{socialMedia &&
 			socialMedia.map(({ name, url }) => (
 				<Link to={url} >
-					<Icons name={name} side='18px' />
+					<Icons name={name} side='20px' />
 				</Link>
 			))}
 	</Side>

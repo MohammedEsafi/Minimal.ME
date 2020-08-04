@@ -1,8 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { theme, Link } from '../styles';
-
-const { colors } = theme;
+import { Link } from '../styles';
 
 const Text = styled.p`
 	font-size: 25px;

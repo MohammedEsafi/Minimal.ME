@@ -1,9 +1,7 @@
 import styled from 'styled-components';
+import { Link as GatsbyLink } from 'gatsby';
 
-const Link = styled.a.attrs(props => ({
-	href: props.to,
-}))
-`
+const Link = styled(GatsbyLink)`
 	padding-block: ${props => props.paddingBlock};
 	padding-inline: ${props => props.paddingInline};
 	${props => props?.addCSS};
@@ -12,7 +10,6 @@ const Link = styled.a.attrs(props => ({
 Link.defaultProps = {
 	paddingBlock: '10px',
 	paddingInline: '10px',
-	to: 'javascript:void(0)',
 }
 
 export default Link;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { Flex } from '../styles';
 import { Logo, Navigation } from '.';
@@ -24,5 +25,9 @@ const Header = ({ toggleMode }) => (
 		</Flex>
 	</StyledHeader>
 )
+
+Header.propTypes = {
+	toggleMode: PropTypes.func.isRequired,
+}
 
 export default Header;

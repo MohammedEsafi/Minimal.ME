@@ -1,8 +1,8 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
-import { Flex, Button, Link } from '../styles';
-import Icons from '../icons';
-import { Sun } from '.';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { Flex, Link, Button } from '../styles';
+import { Switcher } from '.';
 import { navLinks } from '../config';
 
 const Nav = styled.nav`
@@ -30,11 +30,15 @@ const Navigation = ({ toggleMode }) => (
 					))
 				}
 			</Lists>
-			<Link onClick={toggleMode} lineHeight='0' >
-				<Sun />
-			</Link>
+			<Button onClick={toggleMode} type='button' >
+				<Switcher />
+			</Button>
 		</Flex>
 	</Nav>
 )
+
+Navigation.propTypes = {
+	toggleMode: PropTypes.func.isRequired,
+}
 
 export default Navigation;

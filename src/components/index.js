@@ -7,4 +7,4 @@ export { default as Header } from './header';
 export { default as Logo } from './logo';
 export { default as Navigation } from './navigation';
 export { default as Mode } from './mode';
-export { default as Sun } from './sun';
+export { default as Switcher } from './switcher';

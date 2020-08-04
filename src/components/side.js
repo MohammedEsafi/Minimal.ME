@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { media } from '../styles';
 import { Flex } from '../styles';
@@ -6,6 +7,7 @@ import { Flex } from '../styles';
 const Container = styled.div`
 	position: fixed;
 	width: 40px;
+	padding-block: 40px;
 	bottom: 0;
 	height: 100%;
   left: ${props => (props.orientation === 'left' ? '50px' : 'auto')};
@@ -24,14 +26,6 @@ const Container = styled.div`
 
 const addCSS = css`
 	height: 100%;
-
-	&:after {
-		content: "";
-		margin-top: 20px;
-		width: 1px;
-		height: 90px;
-		background-color: ${({ theme }) => theme.primary};
-	}
 `
 
 const Side = ({ children, orientation }) => (
@@ -41,5 +35,10 @@ const Side = ({ children, orientation }) => (
 		</Flex>
 	</Container>
 )
+
+Side.propTypes = {
+	children: PropTypes.node.isRequired,
+	orientation: PropTypes.oneOf(['left', 'right']),
+}
 
 export default Side;
