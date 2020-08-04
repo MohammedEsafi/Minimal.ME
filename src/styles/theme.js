@@ -1,19 +1,22 @@
 const theme = {
 	colors: {
-		background: '#f8f8f8',
-		onbackground: '#111', // body ccd6f6
-		accent: '#111', // sucondary
-		slate: '#111', // white
-		hover: 'rgba(100, 255, 218, 0.07)',
+		light: {
+			primary: '#111111',
+			surface: '#F8F8F8',
+			secondary: '#0147a912',
+		},
+		dark: {
+			primary: '#F8F8F8',
+			surface: '#111111',
+			secondary: '#0147a912',
+		},
+		defaultTheme: 'dark',
 	},
 
 	fonts: {
-		primary: 'Calibre, San Francisco, SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif',
-		secondary: 'SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console, Monaco, monospace',
+		primary: 'FuturaPT, San Francisco, SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif',
+		secondary: 'Eina, San Francisco, SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif',
 	},
-
-	navHeight: '100px',
-	borderRadius: '0px',
 
 	transition: 'all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)',
 };

@@ -1,24 +1,17 @@
 import React from 'react';
 import { Side } from '.';
+import { Link } from '../styles';
 import Icons from '../icons';
-import { theme } from '../styles';
-
-const { transition } = theme;
+import { socialMedia } from '../config';
 
 const Social = () => (
-	<Side orientation='left' justifyContent='center'>
-		<a href="/#" >
-			<Icons.github side='20px' style={{ transition: `${transition}`, }} />
-		</a>
-		<a href="/#">
-			<Icons.linkedin side='20px' />
-		</a>
-		<a href="/#">
-			<Icons.twitter side='20px' />
-		</a>
-		<a href="/#">
-			<Icons.dribbble side='20px' />
-		</a>
+	<Side orientation='left' >
+		{socialMedia &&
+			socialMedia.map(({ name, url }) => (
+				<Link to={url} >
+					<Icons name={name} side='18px' />
+				</Link>
+			))}
 	</Side>
 )
 

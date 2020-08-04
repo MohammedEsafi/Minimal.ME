@@ -1,8 +1,8 @@
 import React from 'react';
 import { SVG } from '../styles';
 
-const document = ({ fill, side, style }) => (
-	<SVG viewBox="0 0 512 512" fill={fill} side={side} style={style} >
+const document = ({ fill, side, addCSS }) => (
+	<SVG viewBox="0 0 512 512" fill={fill} side={side} addCSS={addCSS} >
         <title>Document</title>
         <g>
           <g>

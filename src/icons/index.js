@@ -1,15 +1,29 @@
-import { default as document } from './document';
-import { default as github } from './github';
-import { default as linkedin } from './linkedin';
-import { default as twitter } from './twitter';
-import { default as dribbble } from './dribbble';
-import { default as arrow } from './arrow';
+import React from 'react';
+import PropTypes from 'prop-types';
+import Github from './github';
+import Linkedin from './linkedin';
+import Twitter from './twitter';
+import Dribbble from './dribbble';
 
-export default {
-	document,
-	github,
-	linkedin,
-	twitter,
-	dribbble,
-	arrow,
-};
+const Icons = ({ name, fill, side, addCSS }) => {
+	const props = { fill, side, addCSS };
+
+	switch (name) {
+		case 'github':
+			return <Github { ...props } />;
+		case 'linkedin':
+			return <Linkedin { ...props } />;
+		case 'twitter':
+			return <Twitter { ...props } />;
+		case 'dribbble':
+			return <Dribbble { ...props } />;
+		default:
+			return <Github { ...props } />;
+	}
+}
+
+Icons.propTypes = {
+	name: PropTypes.string.isRequired,
+}
+
+export default Icons;

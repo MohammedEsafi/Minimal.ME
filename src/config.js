@@ -15,24 +15,20 @@ module.exports = {
   twitterHandle: '@bchiang7',
   socialMedia: [
     {
-      name: 'GitHub',
-      url: 'https://github.com/bchiang7',
+      name: 'github',
+      url: 'https://github.com/MohammedEsafi',
     },
     {
-      name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/bchiang7',
+      name: 'linkedin',
+      url: 'https://www.linkedin.com/in/MohammedEsafi',
     },
     {
-      name: 'Codepen',
-      url: 'https://codepen.io/bchiang7',
+      name: 'twitter',
+      url: 'https://twitter.com/MohammedEsafi',
     },
     {
-      name: 'Instagram',
-      url: 'https://www.instagram.com/bchiang7',
-    },
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/bchiang7',
+      name: 'dribbble',
+      url: 'https://dribbble.com/MohammedEsafi',
     },
   ],
 
@@ -40,10 +36,6 @@ module.exports = {
     {
       name: 'About',
       url: '/#about',
-    },
-    {
-      name: 'Experience',
-      url: '/#jobs',
     },
     {
       name: 'Work',

@@ -1,22 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SEO, Navigation, Social, Scroll } from '.';
-import { Global as GlobalStyle } from '../styles';
+import { SEO, Header, Mode, Scroll, Social } from '.';
+import GlobalStyle from '../styles';
+import { ThemeProvider } from 'styled-components';
+import { theme } from '../styles';
+
+const { colors: { light, dark } } = theme;
 
 const Layout = ({ children }) => {
+  const [mode, toggleMode] = Mode()
+
+  const theme = (mode === 'light' ? light : dark)
+
   return (
     <div id="root">
-    	<SEO title="Home" />
-  		<GlobalStyle />
-  		<Navigation />
-      <Social />
-      <Scroll />
-  		{children}
-  		<footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
+      <ThemeProvider theme={theme} >
+      	<SEO title="Home" />
+    		<GlobalStyle />
+        <Header toggleMode={toggleMode} />
+        <Scroll />
+        <Social />
+    		{children}
+      </ThemeProvider>
     </div>
   )
 }

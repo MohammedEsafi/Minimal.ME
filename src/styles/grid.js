@@ -7,7 +7,7 @@ const Grid = styled.div`
 	justify-content: ${props => props.justifyContent};
 	grid-template-columns: ${props => props.templateColumns};
 	grid-template-rows: ${props => props.templateRows};
-	${props => props?.addCSS}
+	${props => props?.addCSS};
 `
 
 Grid.defaultProps = {

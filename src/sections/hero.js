@@ -1,37 +1,36 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Section, theme } from '../styles';
+import { theme, Section } from '../styles';
 
-const { colors } = theme;
+const { fonts } = theme;
 
-const StyledSection = styled(Section)`
+const Container = styled(Section)`
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	osition: relative;
 `
 
 const Headline = styled.h1`
 	position: relative;
-	color: ${colors.slate};
 	font-size: 12rem;
-	margin: 0px;
 	line-height: 1.1;
-	text-shadow: 2px 0px ${colors.accent};
+	margin: 0;
+	font-family: ${fonts.secondary};
 `
 
 const Description = styled.p`
-	font-size: 2rem;
-	margin: 0px;
-	color: ${colors.slate};
+	margin: 0;
+	text-align: center;
 `
 
 const Hero = ({ headline, description }) => (
-	<StyledSection>
-		<Headline data-text={ headline } >{ headline }</Headline>
-		<Description>{ description }</Description>
-	</StyledSection>
+	<Container>
+		<Headline>{ headline }</Headline>
+		<Description dangerouslySetInnerHTML={{ __html: description }} />
+	</Container>
 )
 
 export default Hero;

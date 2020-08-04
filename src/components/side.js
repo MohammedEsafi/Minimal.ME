@@ -7,7 +7,6 @@ const Container = styled.div`
 	position: fixed;
 	width: 40px;
 	bottom: 0;
-	bottom: 0;
 	height: 100%;
   left: ${props => (props.orientation === 'left' ? '50px' : 'auto')};
   right: ${props => (props.orientation === 'left' ? 'auto' : '50px')};
@@ -23,13 +22,21 @@ const Container = styled.div`
   `};
 `
 
-const Height = css`
+const addCSS = css`
 	height: 100%;
+
+	&:after {
+		content: "";
+		margin-top: 20px;
+		width: 1px;
+		height: 90px;
+		background-color: ${({ theme }) => theme.primary};
+	}
 `
 
-const Side = ({ children, orientation, justifyContent }) => (
+const Side = ({ children, orientation }) => (
 	<Container orientation={orientation} >
-		<Flex justifyContent={justifyContent} alignItems='center' flexDirection='column' addCSS={Height} >
+		<Flex justifyContent='end' alignItems='center' flexDirection='column' addCSS={addCSS} >
 			{children}
 		</Flex>
 	</Container>

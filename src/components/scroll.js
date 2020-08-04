@@ -1,53 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import styled, { css } from 'styled-components';
+import React from 'react';
+import styled from 'styled-components';
 import { Side } from '.';
-import { theme, Flex } from '../styles';
-import Icons from '../icons';
+import { Flex, Link } from '../styles';
 
-const { colors, fonts, transition } = theme;
-
-const Text = styled.a`
+const Text = styled.p`
 	writing-mode: vertical-rl;
 	margin: 20px auto;
-	font-size: 12px;
-	text-transform: uppercase;
-	font-family: ${fonts.secondary};
-	transition: ${transition};
 `
 
-const FlexCSS = css`
-	padding-bottom: 50px;
-
-	&:hover {
-		cursor: pointer;
-
-		& > a {
-			color: ${colors.accent};
-			margin-bottom: 25px;
-		}
-		& > svg {
-			fill: ${colors.accent};
-		}
-	}
-`
-
-const Scroll = () => {
-	const [direction, setDirection] = useState('');
-
-	useEffect(() => {
-		setDirection('down');
-	}, [direction]);
-
-	return (
-		<Side orientation='right' justifyContent='end'>
-			<Flex alignItems='center' flexDirection='column' addCSS={FlexCSS} >
-				<Text href='javascript:void(0)' onClick={(event) => event.preventDefault} >
-					scroll {direction}
+const Scroll = () => (
+	<Side orientation='right' >
+		<Link to='' >
+			<Flex alignItems='center' flexDirection='column'>
+				<Text>
+					hello@mesafi.com
 				</Text>
-				<Icons.arrow.down side='20px' style={{ transition: `${transition}`, }} />
 			</Flex>
-		</Side>
-	);
-}
+		</Link>
+	</Side>
+)
 
 export default Scroll;

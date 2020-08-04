@@ -1,5 +1,66 @@
 import { css } from 'styled-components';
 
+import EinaLight from '../fonts/Eina/eina-light.ttf'
+import EinaRegular from '../fonts/Eina/eina-regular.ttf'
+import EinaSemiBold from '../fonts/Eina/eina-semibold.ttf'
+import EinaBold from '../fonts/Eina/eina-bold.ttf'
+
+import FuturaPTLight from '../fonts/FuturaPT/FuturaPT-Web-Light.ttf'
+import FuturaPTBook from '../fonts/FuturaPT/FuturaPT-Web-Book.ttf'
+import FuturaPTMedium from '../fonts/FuturaPT/FuturaPT-Web-Medium.ttf'
+import FuturaPTDemi from '../fonts/FuturaPT/FuturaPT-Web-Demi.ttf'
+import FuturaPTBold from '../fonts/FuturaPT/FuturaPT-Web-Bold.ttf'
+import FuturaPTHeavy from '../fonts/FuturaPT/FuturaPT-Web-Heavy.ttf'
+
+import AvenirBlack from '../fonts/Avenir/Avenir-Black.ttf'
+import AvenirBlackOblique from '../fonts/Avenir/Avenir-BlackOblique.ttf'
+import AvenirBook from '../fonts/Avenir/Avenir-Book.ttf'
+import AvenirBookOblique from '../fonts/Avenir/Avenir-BookOblique.ttf'
+import AvenirHeavy from '../fonts/Avenir/Avenir-Heavy.ttf'
+import AvenirHeavyOblique from '../fonts/Avenir/Avenir-HeavyOblique.ttf'
+import AvenirMedium from '../fonts/Avenir/Avenir-Medium.ttf'
+import AvenirMediumOblique from '../fonts/Avenir/Avenir-MediumOblique.ttf'
+import AvenirRoman from '../fonts/Avenir/Avenir-Roman.ttf'
+import AvenirOblique from '../fonts/Avenir/Avenir-Oblique.ttf'
+import AvenirLight from '../fonts/Avenir/Avenir-Light.ttf'
+import AvenirLightOblique from '../fonts/Avenir/Avenir-LightOblique.ttf'
+
+import GorditaBlack from '../fonts/Gordita/Gordita-Black.woff'
+import GorditaBlackItalic from '../fonts/Gordita/Gordita-BlackItalic.woff'
+import GorditaBold from '../fonts/Gordita/Gordita-Bold.woff'
+import GorditaBoldItalic from '../fonts/Gordita/Gordita-BoldItalic.woff'
+import GorditaLight from '../fonts/Gordita/Gordita-Light.woff'
+import GorditaLightItalic from '../fonts/Gordita/Gordita-LightItalic.woff'
+import GorditaMedium from '../fonts/Gordita/Gordita-Medium.woff'
+import GorditaMediumItalic from '../fonts/Gordita/Gordita-MediumItalic.woff'
+import GorditaRegular from '../fonts/Gordita/Gordita-Regular.woff'
+import GorditaRegularItalic from '../fonts/Gordita/Gordita-RegularItalic.woff'
+import GorditaThin from '../fonts/Gordita/Gordita-Thin.woff'
+import GorditaThinItalic from '../fonts/Gordita/Gordita-ThinItalic.woff'
+import GorditaUltra from '../fonts/Gordita/Gordita-Ultra.woff'
+import GorditaUltraItalic from '../fonts/Gordita/Gordita-UltraItalic.woff'
+
+import GilroyBlack from '../fonts/Gilroy/Gilroy-Black.ttf'
+import GilroyBlackItalic from '../fonts/Gilroy/Gilroy-BlackItalic.ttf'
+import GilroyBold from '../fonts/Gilroy/Gilroy-Bold.ttf'
+import GilroyBoldItalic from '../fonts/Gilroy/Gilroy-BoldItalic.ttf'
+import GilroyExtraBold from '../fonts/Gilroy/Gilroy-Extrabold.ttf'
+import GilroyExtraBoldItalic from '../fonts/Gilroy/Gilroy-ExtraboldItalic.ttf'
+import GilroyHeavy from '../fonts/Gilroy/Gilroy-Heavy.ttf'
+import GilroyHeavyItalic from '../fonts/Gilroy/Gilroy-HeavyItalic.ttf'
+import GilroyLight from '../fonts/Gilroy/Gilroy-Light.ttf'
+import GilroyLightItalic from '../fonts/Gilroy/Gilroy-LightItalic.ttf'
+import GilroyMedium from '../fonts/Gilroy/Gilroy-Medium.ttf'
+import GilroyMediumItalic from '../fonts/Gilroy/Gilroy-MediumItalic.ttf'
+import GilroyRegular from '../fonts/Gilroy/Gilroy-Regular.ttf'
+import GilroyRegularItalic from '../fonts/Gilroy/Gilroy-RegularItalic.ttf'
+import GilroySemiBold from '../fonts/Gilroy/Gilroy-SemiBold.ttf'
+import GilroySemiBoldItalic from '../fonts/Gilroy/Gilroy-SemiboldItalic.ttf'
+import GilroyThin from '../fonts/Gilroy/Gilroy-Thin.ttf'
+import GilroyThinItalic from '../fonts/Gilroy/Gilroy-ThinItalic.ttf'
+import GilroyUltraLight from '../fonts/Gilroy/Gilroy-UltraLight.ttf'
+import GilroyUltraLightItalic from '../fonts/Gilroy/Gilroy-UltraLightItalic.ttf'
+
 import CalibreLightTTF from '../fonts/Calibre/Calibre-Light.ttf';
 import CalibreLightWOFF from '../fonts/Calibre/Calibre-Light.woff';
 import CalibreLightWOFF2 from '../fonts/Calibre/Calibre-Light.woff2';
@@ -149,6 +210,349 @@ const Fonts = css`
       url(${SFMonoSemiboldItalicTTF}) format('truetype');
     font-weight: 600;
     font-style: italic;
+  }
+
+
+  @font-face {
+    font-family: 'Gordita';
+    src: url(${GorditaThin}) format('woff');
+    font-weight: 100;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gordita';
+    src: url(${GorditaThinItalic}) format('woff');
+    font-weight: 100;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Gordita';
+    src: url(${GorditaUltra}) format('woff');
+    font-weight: 200;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gordita';
+    src: url(${GorditaUltraItalic}) format('woff');
+    font-weight: 200;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Gordita';
+    src: url(${GorditaLight}) format('woff');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gordita';
+    src: url(${GorditaLightItalic}) format('woff');
+    font-weight: 300;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Gordita';
+    src: url(${GorditaRegular}) format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gordita';
+    src: url(${GorditaRegularItalic}) format('woff');
+    font-weight: normal;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Gordita';
+    src: url(${GorditaMedium}) format('woff');
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gordita';
+    src: url(${GorditaMediumItalic}) format('woff');
+    font-weight: 500;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Gordita';
+    src: url(${GorditaUltra}) format('woff');
+    font-weight: 600;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gordita';
+    src: url(${GorditaUltra}) format('woff');
+    font-weight: 600;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Gordita';
+    src: url(${GorditaBold}) format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gordita';
+    src: url(${GorditaBoldItalic}) format('woff');
+    font-weight: 700;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Gordita';
+    src: url(${GorditaBlack}) format('woff');
+    font-weight: 900;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gordita';
+    src: url(${GorditaBlackItalic}) format('woff');
+    font-weight: 900;
+    font-style: italic;
+  }
+
+
+  @font-face {
+    font-family: 'Gilroy';
+    src: url(${GilroyThin}) format('woff');
+    font-weight: 100;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url(${GilroyThinItalic}) format('woff');
+    font-weight: 100;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url(${GilroyUltraLight}) format('woff');
+    font-weight: 200;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url(${GilroyUltraLightItalic}) format('woff');
+    font-weight: 200;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url(${GilroyLight}) format('woff');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url(${GilroyLightItalic}) format('woff');
+    font-weight: 300;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url(${GilroyRegular}) format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url(${GilroyRegularItalic}) format('woff');
+    font-weight: 400;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url(${GilroyMedium}) format('woff');
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url(${GilroyMediumItalic}) format('woff');
+    font-weight: 500;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url(${GilroySemiBold}) format('woff');
+    font-weight: 600;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url(${GilroySemiBoldItalic}) format('woff');
+    font-weight: 600;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url(${GilroyBold}) format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url(${GilroyBoldItalic}) format('woff');
+    font-weight: 700;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url(${GilroyExtraBold}) format('woff');
+    font-weight: 800;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url(${GilroyExtraBoldItalic}) format('woff');
+    font-weight: 800;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url(${GilroyBlack}) format('woff');
+    font-weight: 900;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url(${GilroyBlackItalic}) format('woff');
+    font-weight: 900;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Avenir';
+    src: url(${AvenirLight}) format('truetype');
+    font-weight: 200;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Avenir';
+    src: url(${AvenirLightOblique}) format('truetype');
+    font-weight: 200;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Avenir';
+    src: url(${AvenirBook}) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Avenir';
+    src: url(${AvenirBookOblique}) format('truetype');
+    font-weight: 300;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Avenir';
+    src: url(${AvenirRoman}) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Avenir';
+    src: url(${AvenirOblique}) format('truetype');
+    font-weight: 400;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Avenir';
+    src: url(${AvenirMedium}) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Avenir';
+    src: url(${AvenirMediumOblique}) format('truetype');
+    font-weight: 500;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Avenir';
+    src: url(${AvenirHeavy}) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Avenir';
+    src: url(${AvenirHeavyOblique}) format('truetype');
+    font-weight: 700;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Avenir';
+    src: url(${AvenirBlack}) format('truetype');
+    font-weight: 800;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Avenir';
+    src: url(${AvenirBlackOblique}) format('truetype');
+    font-weight: 800;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Eina';
+    src: url(${EinaLight}) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Eina';
+    src: url(${EinaRegular}) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Eina';
+    src: url(${EinaSemiBold}) format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Eina';
+    src: url(${EinaBold}) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'FuturaPT';
+    src: url(${FuturaPTLight}) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'FuturaPT';
+    src: url(${FuturaPTBook}) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'FuturaPT';
+    src: url(${FuturaPTMedium}) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'FuturaPT';
+    src: url(${FuturaPTDemi}) format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'FuturaPT';
+    src: url(${FuturaPTHeavy}) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'FuturaPT';
+    src: url(${FuturaPTBold}) format('truetype');
+    font-weight: 800;
+    font-style: normal;
   }
 `;
 

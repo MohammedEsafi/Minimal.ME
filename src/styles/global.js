@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import theme from './theme';
 import Fonts from './fonts';
 
-const { colors, fonts } = theme;
+const { fonts } = theme;
 
 const Global = createGlobalStyle`
 	${Fonts};
@@ -25,11 +25,11 @@ const Global = createGlobalStyle`
 		width: 100%;
 		min-height: 100%;
 		overflow-x: hidden;
-		background-color: ${colors.background};
-		color: ${colors.onbackground};
-		line-height: 1.6;
+		background-color: ${({ theme }) => theme.surface};
+		color: ${({ theme }) => theme.primary};
+		font-size: 1.8rem;
+		line-height: 1.8;
 		font-family: ${fonts.primary};
-		
 	}
 
 	a {
@@ -38,12 +38,10 @@ const Global = createGlobalStyle`
 		text-decoration-skip-ink: auto;
 		color: inherit;
 		cursor: pointer;
-		padding: 10px;
+	}
 
-		&:hover,
-		&:focus {
-			color: ${colors.accent};
-		}
+	p {
+		margin: 0px 0px 1.8rem;
 	}
 
 	#root {
