@@ -1,10 +1,12 @@
 import React from 'react';
 import styled, { css, keyframes } from 'styled-components';
 import { media, Flex, theme } from '../styles';
+import { hex2rgba } from '../utils';
 
 const { transition: { timing } } = theme;
 
 const Container = styled.div`
+	--backgroundColor: ${({ theme }) => hex2rgba(theme.primary, 0.5)};
 	position: absolute;
 	width: 40px;
 	padding-block: 40px;
@@ -36,7 +38,7 @@ const Line = styled.span`
 	overflow: hidden;
 	width: 1px;
 	height: 100px;
-	background-color: ${({ theme }) => theme.secondary};
+	background-color: var(--backgroundColor);
 
 	&:after {
 		position: absolute;
@@ -54,7 +56,7 @@ const Line = styled.span`
 `
 
 const Text = styled.p`
-	color: ${({ theme }) => theme.secondary};
+	color: var(--backgroundColor);
 	writing-mode: vertical-rl;
 	text-transform: uppercase;
 	white-space: nowrap;

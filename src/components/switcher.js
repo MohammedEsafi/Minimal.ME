@@ -11,6 +11,7 @@ const Container = styled.div`
 `
 
 const Circle = styled.div`
+	cusor: pointer;
 	position: relative;
 	width: 100%;
 	height: 100%;

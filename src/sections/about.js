@@ -33,6 +33,8 @@ const About = () => (
 			</Headling>
 			<Flex flexDirection='row' addCSS={LINEBefore} >
 				<div>
+					grouped para in react
+					link hover
 					<Text>Hello! I'm Mohammed, a software engineer based in Morocco !<span role='img' aria-label='Morocco' > 🇲🇦</span></Text>
 					<Text>I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.</Text>
 					<Text>Shortly after graduating from Northeastern University, I joined the engineering team at Upstatement where I work on a wide variety of interesting and meaningful projects on a daily basis.</Text>

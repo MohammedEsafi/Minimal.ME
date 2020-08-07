@@ -9,6 +9,10 @@ const Button = styled.button.attrs(props => (props.type ?? {
 	outline: none;
 	margin: 0;
 	padding: 0;
+
+	&:hover {
+		cursor: pointer;
+	}
 `;
 
 export default Button;
