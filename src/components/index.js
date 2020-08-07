@@ -1,10 +1,11 @@
 export { default as Layout } from './layout';
 export { default as SEO } from './seo';
-export { default as Side } from './side';
 export { default as Social } from './social';
-export { default as Scroll } from './scroll';
+export { default as Indicator } from './indicator';
 export { default as Header } from './header';
 export { default as Logo } from './logo';
 export { default as Navigation } from './navigation';
 export { default as Mode } from './mode';
 export { default as Switcher } from './switcher';
+export { default as Footer } from './footer';
+export { default as Skills } from './skills';

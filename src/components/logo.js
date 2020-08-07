@@ -2,25 +2,66 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from '../styles';
 
-const Text = styled.p`
-	font-size: 25px;
-	color: ${({ theme }) => theme.surface};
-	background-color: ${({ theme }) => theme.primary};
-	margin: 0;
-	line-height: 1;
-	padding: 6px 6px 6px 7px;
-	user-select: none;
-`
-
 const addCSS = css`
 	padding: 0;
+	position: relative;
+  width: 40px;
+  height: 40px;
+`
+
+const Draw = styled.span`
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: 4px;
+  height: 4px;
+  background-color: ${({ theme }) => theme.primary};
+  box-shadow: calc(4px * -1) calc(4px * -1) ${({ theme }) => theme.primary},
+              calc(4px * 1) calc(4px * -1) #edd892,
+              calc(4px * -2) calc(4px * -2) ${({ theme }) => theme.primary},
+              calc(4px * 2) calc(4px * -2) ${({ theme }) => theme.primary},
+              calc(4px * -3) calc(4px * -3) #fcb97d,
+              calc(4px * -4) calc(4px * 1) #fcb97d,
+              calc(4px * -4) calc(4px * 2) #fcb97d,
+              calc(4px * -4) calc(4px * 3) #edd892,
+              calc(4px * -4) calc(4px * 4) ${({ theme }) => theme.primary},
+              calc(4px * -3) calc(4px * 0) #fcb97d,
+              calc(4px * -3) calc(4px * 1) #edd892,
+              calc(4px * -3) calc(4px * 2) #edd892,
+              calc(4px * -3) calc(4px * 3) ${({ theme }) => theme.primary},
+              calc(4px * -3) calc(4px * 4) ${({ theme }) => theme.primary},
+              calc(4px * -1) calc(4px * 1) ${({ theme }) => theme.primary},
+              calc(4px * -2) calc(4px * 2) ${({ theme }) => theme.primary},
+              calc(4px * 3) calc(4px * -3) #fcb97d,
+              calc(4px * 1) calc(4px * 1) ${({ theme }) => theme.primary},
+              calc(4px * 2) calc(4px * 2) #fcb97d,
+              calc(4px * 3) calc(4px * 0) ${({ theme }) => theme.primary},
+              calc(4px * 3) calc(4px * 1) ${({ theme }) => theme.primary},
+              calc(4px * 3) calc(4px * 2) ${({ theme }) => theme.primary},
+              calc(4px * 3) calc(4px * 3) #fcb97d,
+              calc(4px * 3) calc(4px * 4) ${({ theme }) => theme.primary},
+              calc(4px * 4) calc(4px * 1) ${({ theme }) => theme.primary},
+              calc(4px * 4) calc(4px * 2) ${({ theme }) => theme.primary},
+              calc(4px * 4) calc(4px * 3) ${({ theme }) => theme.primary},
+              calc(4px * 4) calc(4px * 4) #edd892,
+              calc(4px * -4) calc(4px * -4) #fcb97d,
+              calc(4px * 4) calc(4px * -4) ${({ theme }) => theme.primary},
+              calc(4px * 0) calc(4px * -1) #edd892,
+              calc(4px * 0) calc(4px * -2) ${({ theme }) => theme.primary},
+              calc(4px * 0) calc(4px * 1) ${({ theme }) => theme.primary},
+              calc(4px * -2) calc(4px * 0) ${({ theme }) => theme.primary},
+              calc(4px * 2) calc(4px * 0) #edd892,
+              calc(4px * 2) calc(4px * -1) #edd892,
+              calc(4px * 2) calc(4px * 1) ${({ theme }) => theme.primary},
+              calc(4px * -2) calc(4px * -1) ${({ theme }) => theme.primary},
+              calc(4px * -2) calc(4px * 1) ${({ theme }) => theme.primary};
 `
 
 const Logo = () => (
 	<Link to='/' addCSS={addCSS} >
-		<Text>
-			M.
-		</Text>
+		<Draw />
 	</Link>
 )
 

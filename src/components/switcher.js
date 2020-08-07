@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { theme } from '../styles';
+
+const { transition: { timing } } = theme;
 
 const Container = styled.div`
 	width: ${props => props.side};
@@ -14,6 +17,7 @@ const Circle = styled.div`
 	border: 1px ${({ theme }) => theme.primary } solid;
 	border-radius: 50%;
 	background-color: ${({ theme }) => theme.primary };
+	transition: background-color 300ms ${timing};
 
 	&:after {
 		content: '';
@@ -24,6 +28,7 @@ const Circle = styled.div`
 		height: 100%;
 		left: 0;
 		top: 0;
+		transition: background-color 300ms ${timing};
 	}
 `
 
