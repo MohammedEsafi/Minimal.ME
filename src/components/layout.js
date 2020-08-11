@@ -23,13 +23,14 @@ const Layout = ({ children }) => {
     `
   )
 
-  const [mode, toggleMode] = Mode()
+  const [mode, toggleMode, mounted] = Mode()
 
-  const theme = (mode === 'light' ? light : dark)
+  const themeMode = (mode === 'light' ? light : dark)
 
   return (
+    mounted &&
     <div id="root">
-      <ThemeProvider theme={theme} >
+      <ThemeProvider theme={themeMode} >
       	<SEO metadata={site.siteMetadata} />
     		<GlobalStyle />
         <Header toggleMode={toggleMode} />

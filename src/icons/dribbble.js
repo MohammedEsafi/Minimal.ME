@@ -3,6 +3,7 @@ import { SVG } from '../styles';
 
 const Dribbble = ({ fill, side, addCSS }) => (
   <SVG viewBox="0 0 97.75 97.75" fill={fill} side={side} addCSS={addCSS} >
+  	<title>Dribbble</title>
     <g>
 			<path d="M46.927,38.775C42.032,30.117,36.8,22.816,35.746,21.367c-8.416,4.016-14.719,11.764-16.74,21.088
 				c0.084,0,0.184,0,0.299,0C22.121,42.455,33.789,42.229,46.927,38.775z"/>

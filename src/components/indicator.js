@@ -6,7 +6,7 @@ import { hex2rgba } from '../utils';
 const { transition: { timing } } = theme;
 
 const Container = styled.div`
-	--backgroundColor: ${({ theme }) => hex2rgba(theme.primary, 0.5)};
+	--backgroundColor: ${({ theme }) => hex2rgba(theme.primary, 0.3)};
 	position: absolute;
 	width: 40px;
 	padding-block: 40px;

@@ -3,14 +3,14 @@ const theme = {
 		light: {
 			primary: '#111111',
 			surface: '#F8F8F8',
-			secondary: '#d21212',
+			secondary: '#edd892',
 		},
 		dark: {
 			primary: '#F8F8F8',
 			surface: '#111111',
-			secondary: '#d21212',
+			secondary: '#fcb97d',
 		},
-		defaultTheme: 'dark',
+		defaultTheme: 'light',
 	},
 
 	fonts: {
@@ -20,7 +20,10 @@ const theme = {
 
 	transition: {
 		timing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
-	}
+	},
+
+	navHeight: '100px',
+  navScrollHeight: '70px',
 };
 
 export default theme;

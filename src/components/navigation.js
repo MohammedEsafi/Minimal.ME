@@ -1,13 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Flex, Button } from '../styles';
-import { Switcher } from '.';
+import { Flex, Button, media } from '../styles';
+import { Switcher, Split } from '.';
 import { navLinks } from '../config';
 import { Link as GatsbyLink } from 'gatsby';
 
 const Nav = styled.nav`
 	color: ${({ theme }) => theme.primary};
+
+	${media.tablet`
+		display: none;
+	`};
 `
 
 const Link = styled(GatsbyLink)`
@@ -26,20 +30,24 @@ const Item = styled.li`
 `
 
 const Navigation = ({ toggleMode }) =>  (
-	<Nav>
-		<Flex gap='30px' alignItems='center' >
+	<Flex gap='30px' alignItems='center' >
+		<Nav>
 			<Lists>
 				{navLinks &&
 					navLinks.map(({ name, url }, index) => (
-						<Item key={index} ><Link to={url} >{name}</Link></Item>
+						<Item key={index} >
+							<Link to={url} >
+								<Split text={name} />
+							</Link>
+						</Item>
 					))
 				}
 			</Lists>
-			<Button onClick={toggleMode} type='button' >
-				<Switcher />
-			</Button>
-		</Flex>
-	</Nav>
+		</Nav>
+		<Button onClick={toggleMode} type='button' >
+			<Switcher />
+		</Button>
+	</Flex>
 )
 
 Navigation.propTypes = {

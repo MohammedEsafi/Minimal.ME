@@ -1,21 +1,34 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Grid = styled.div`
 	display: grid;
-	align-items: ${props => props.alignItems};
 	gap: ${props => ((props?.rowGap || props.gap) + " " + (props?.columnGap || props.gap))};
-	justify-content: ${props => props.justifyContent};
-	grid-template-columns: ${props => props.templateColumns};
-	grid-template-rows: ${props => props.templateRows};
+	
+	${({ alignItems }) => 
+		alignItems && css`
+			align-items: ${alignItems}
+	`};
+	
+	${({ justifyContent }) => 
+		justifyContent && css`
+			justify-content: ${justifyContent}
+	`};
+
+	${({ templateColumns }) => 
+		templateColumns && css`
+			grid-template-columns: ${templateColumns}
+	`};
+
+	${({ templateRows }) => 
+		templateRows && css`
+			grid-template-rows: ${templateRows}
+	`};
+
 	${props => props?.addCSS};
 `
 
 Grid.defaultProps = {
-	alignItems: 'stretch',
-	justifyContent: 'flex-start',
-	gap: '0px',
-	templateColumns: 'none',
-	templateRows: 'none',
+	gap: '0',
 }
 
 export default Grid;

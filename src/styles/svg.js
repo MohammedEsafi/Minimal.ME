@@ -8,6 +8,7 @@ const SVG = styled.svg.attrs({
 	width: ${props => props.side}; 
 	height: ${props => props.side};
 	${props => props?.addCSS};
+	pointer-events: none;
 `
 
 SVG.defaultProps = {

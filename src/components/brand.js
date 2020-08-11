@@ -59,10 +59,10 @@ const Draw = styled.span`
               calc(4px * -2) calc(4px * 1) ${({ theme }) => theme.primary};
 `
 
-const Logo = () => (
+const Brand = () => (
 	<Link to='/' addCSS={addCSS} >
 		<Draw />
 	</Link>
 )
 
-export default Logo;
+export default Brand;

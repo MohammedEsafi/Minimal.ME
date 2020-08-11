@@ -5,6 +5,7 @@ import Linkedin from './linkedin';
 import Twitter from './twitter';
 import Dribbble from './dribbble';
 import Arrow from './arrow';
+import External from './external';
 
 const Icons = ({ name, fill, side, addCSS }) => {
 	const props = { fill, side, addCSS };
@@ -20,6 +21,8 @@ const Icons = ({ name, fill, side, addCSS }) => {
 			return <Dribbble { ...props } />;
 		case 'down-arrow':
 			return <Arrow.down { ...props } />;
+		case 'external':
+			return <External { ...props } />;
 		default:
 			return null;
 	}

@@ -5,6 +5,7 @@ const { colors: { defaultTheme } } = theme;
 
 const Mode = () => {
 	const [mode, setMode] = useState(defaultTheme);
+	const [mounted, setMounted] = useState(false);
 
 	useEffect(() => {
 		const localMode = window.localStorage.getItem('mode');
@@ -15,6 +16,8 @@ const Mode = () => {
 		} else {
 			setMode(localMode)
 		}
+
+		setMounted(true)
 	}, [])
 
 	const toggleMode = () => {
@@ -27,7 +30,7 @@ const Mode = () => {
 		}
 	}
 
-	return [mode, toggleMode];
+	return [mode, toggleMode, mounted];
 }
 
 export default Mode;
