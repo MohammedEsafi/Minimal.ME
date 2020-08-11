@@ -31,7 +31,7 @@ const Header = ({ toggleMode }) => {
 	const handleScroll = () => {
 		refHeader.current.animate(
 			[
-				{ height: window.scrollY > DELTA ? navScrollHeight : navHeight },
+				{ height: window.pageYOffset > DELTA ? navScrollHeight : navHeight },
 			],
 			{
 				duration: 1000,
