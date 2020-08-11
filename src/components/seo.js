@@ -15,6 +15,10 @@ function SEO({ metadata }) {
       titleTemplate={`${metadata.title} | %s`}
       meta={[
         {
+          name: `robots`,
+          content: `noindex`,
+        },
+        {
           name: `description`,
           content: metadata.description,
         },
