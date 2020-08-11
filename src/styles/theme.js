@@ -23,7 +23,7 @@ const theme = {
 	},
 
 	navHeight: '100px',
-  navScrollHeight: '70px',
+  navScrollHeight: '1px',
 };
 
 export default theme;

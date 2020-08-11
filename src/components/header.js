@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { Flex, theme } from '../styles';
+import { Flex, theme, media } from '../styles';
 import { Brand, Navigation, Hamburger } from '.';
 
 const isBrowser = typeof window !== `undefined`
@@ -19,6 +19,10 @@ const StyledHeader = styled.header`
 	padding: 0 50px;
 	background-color: ${({ theme }) => theme.surface};
 	z-index: 20;
+
+	${media.phone`
+		padding: 0 25px;
+	`};
 `
 
 const Height = css`
@@ -31,7 +35,7 @@ const Header = ({ toggleMode }) => {
 	const handleScroll = () => {
 		refHeader.current.animate(
 			[
-				{ height: window.pageYOffset > DELTA ? navScrollHeight : navHeight },
+				{ height: window.scrollY > DELTA ? navScrollHeight : navHeight },
 			],
 			{
 				duration: 1000,
