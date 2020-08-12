@@ -31,9 +31,7 @@ const Header = ({ toggleMode }) => {
 	const refHeader = useRef(null);
 
 	const handleScroll = () => {
-		document.getElementById('scrollY').innerHTML = window.scrollY
-
-		refHeader.current.animate(
+		/*refHeader.current.animate(
 			[
 				{
 					height: window.scrollY > DELTA ? navScrollHeight : navHeight,
@@ -45,7 +43,8 @@ const Header = ({ toggleMode }) => {
 				easing: timing,
 				fill: 'forwards',
 			}
-		)
+		)*/
+		refHeader.current.innerHTML = window.scrollY
 	}
 
 	useEffect(() => {
@@ -59,7 +58,6 @@ const Header = ({ toggleMode }) => {
 		<StyledHeader ref={refHeader} >
 			<Flex alignItems='center' justifyContent='space-between' addCSS={Height} >
 				<Hamburger />
-				<div id='scrollY' >00</div>
 				<Brand />
 				<Navigation toggleMode={toggleMode} />
 			</Flex>
