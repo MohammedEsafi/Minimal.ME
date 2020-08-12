@@ -31,11 +31,13 @@ const Header = ({ toggleMode }) => {
 	const refHeader = useRef(null);
 
 	const handleScroll = () => {
-		/*refHeader.current.animate(
+		const isONTOP = window.scrollY < DELTA
+
+		refHeader.current.animate(
 			[
 				{
-					height: window.scrollY > DELTA ? navScrollHeight : navHeight,
-					background: '#EEEEEE',
+					height: isONTOP ? navHeight : navScrollHeight,
+					boxShadow: isONTOP ? 'none' : `0 8px 8px #000000`,
 				},
 			],
 			{
@@ -43,8 +45,7 @@ const Header = ({ toggleMode }) => {
 				easing: timing,
 				fill: 'forwards',
 			}
-		)*/
-		refHeader.current.innerHTML = window.scrollY
+		)
 	}
 
 	useEffect(() => {
