@@ -35,10 +35,8 @@ const Header = ({ toggleMode }) => {
 
 		refHeader.current.animate(
 			[
-				{
-					height: isONTOP ? navHeight : navScrollHeight,
-					boxShadow: isONTOP ? 'none' : `0 8px 8px #000000`,
-				},
+				{ height: isONTOP ? navHeight : navScrollHeight },
+				{ boxShadow: isONTOP ? 'none' : `0 8px 8px #000000` },
 			],
 			{
 				duration: 1000,
