@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { theme, Section } from '../styles';
+import { theme, Section, media } from '../styles';
 
 const { fonts } = theme;
 
@@ -20,6 +20,14 @@ const Headline = styled.h1`
 	line-height: 1.1;
 	margin: 0;
 	font-family: ${fonts.secondary};
+
+	${media.tablet`
+		font-size: 10rem;
+	`};
+	
+	${media.phone`
+		font-size: 8rem;
+	`};
 `
 
 const Description = styled.p`

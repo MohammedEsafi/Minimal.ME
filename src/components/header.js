@@ -4,8 +4,6 @@ import styled, { css } from 'styled-components';
 import { Flex, theme, media } from '../styles';
 import { Brand, Navigation, Hamburger } from '.';
 
-const isBrowser = typeof window !== `undefined`
-
 const DELTA = 5;
 
 const { navHeight, navScrollHeight, transition } = theme;
@@ -33,9 +31,14 @@ const Header = ({ toggleMode }) => {
 	const refHeader = useRef(null);
 
 	const handleScroll = () => {
+		document.getElementById('scrollY').innerHTML = window.scrollY
+
 		refHeader.current.animate(
 			[
-				{ height: window.scrollY > DELTA ? navScrollHeight : navHeight },
+				{
+					height: window.scrollY > DELTA ? navScrollHeight : navHeight,
+					background: '#EEEEEE',
+				},
 			],
 			{
 				duration: 1000,
@@ -56,6 +59,7 @@ const Header = ({ toggleMode }) => {
 		<StyledHeader ref={refHeader} >
 			<Flex alignItems='center' justifyContent='space-between' addCSS={Height} >
 				<Hamburger />
+				<div id='scrollY' >00</div>
 				<Brand />
 				<Navigation toggleMode={toggleMode} />
 			</Flex>

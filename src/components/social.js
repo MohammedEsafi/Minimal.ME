@@ -28,7 +28,7 @@ const addCSS = css`
 
 const Social = () => (
 	<Container>
-		<Flex justifyContent='end' alignItems='center' flexDirection='column' addCSS={addCSS} >
+		<Flex justifyContent='flex-end' alignItems='center' flexDirection='column' addCSS={addCSS} >
 			{socialMedia &&
 				socialMedia.map(({ name, url }, index) => (
 					<Link key={index} to={url} >

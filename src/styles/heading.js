@@ -12,6 +12,7 @@ const Heading = styled.h2`
 		color: ${({ theme }) => hex2rgba(theme.primary, 0.03)};
 		right: 0;
 		top: 0;
+		z-index: -1;
 	}
 `
 

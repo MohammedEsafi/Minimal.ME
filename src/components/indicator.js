@@ -65,7 +65,7 @@ const Text = styled.p`
 
 const Indicator = () => (
 	<Container>
-		<Flex justifyContent='end' alignItems='center' flexDirection='column' addCSS={addCSS} >
+		<Flex justifyContent='flex-end' alignItems='center' flexDirection='column' addCSS={addCSS} >
 			<Text>
 				explore world
 			</Text>
