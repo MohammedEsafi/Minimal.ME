@@ -8,17 +8,17 @@ const Heading = styled.h2`
 	user-select: none;
 
 	${media.tablet`
-		font-size: 4.5rem;
+		font-size: 4rem;
 	`};
 	
 	${media.phone`
-		font-size: 4rem;
+		font-size: 3rem;
 	`};
 
 	&:after {
 		content: '<' attr(data-second-title) ' />';
 		position: absolute;
-		color: ${({ theme }) => hex2rgba(theme.primary, 0.03)};
+		color: ${({ theme }) => hex2rgba(theme.primary, 0.07)};
 		right: 0;
 		top: 0;
 		z-index: -1;
