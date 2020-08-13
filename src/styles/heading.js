@@ -1,10 +1,19 @@
 import styled from 'styled-components';
 import { hex2rgba } from '../utils';
+import media from './media';
 
 const Heading = styled.h2`
 	font-size: 5rem;
 	position: relative;
 	user-select: none;
+
+	${media.tablet`
+		font-size: 4.5rem;
+	`};
+	
+	${media.phone`
+		font-size: 4rem;
+	`};
 
 	&:after {
 		content: '<' attr(data-second-title) ' />';

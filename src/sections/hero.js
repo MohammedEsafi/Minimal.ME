@@ -22,11 +22,11 @@ const Headline = styled.h1`
 	font-family: ${fonts.secondary};
 
 	${media.tablet`
-		font-size: 10rem;
+		font-size: 11.5rem;
 	`};
 	
 	${media.phone`
-		font-size: 8rem;
+		font-size: 11rem;
 	`};
 `
 

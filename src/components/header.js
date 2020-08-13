@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css, withTheme } from 'styled-components';
 import { Flex, theme, media } from '../styles';
+import { hex2rgba } from '../utils';
 import { Brand, Navigation, Hamburger } from '.';
 
 const DELTA = 5;
@@ -16,7 +17,9 @@ const StyledHeader = styled.header`
 	position: fixed;
 	padding: 0 50px;
 	background-color: ${({ theme }) => theme.surface};
-	transition: height, box-shadow 1s ${timing};
+	transition-property: height, box-shadow;
+	transition-duration: 500ms;
+	transition-timing-function: ${timing};
 	z-index: 20;
 
 	${media.phone`
@@ -25,7 +28,7 @@ const StyledHeader = styled.header`
 
 	&.fixed {
 		height: ${navScrollHeight};
-		box-shadow: 0 8px 8px ${({ theme }) => theme.primary};
+		box-shadow: 0 0 1px ${({ theme }) => hex2rgba(theme.primary, 0.3)};
 	}
 `
 
@@ -35,18 +38,23 @@ const Height = css`
 
 const Header = ({ toggleMode, theme }) => {
 	const refHeader = useRef(null);
+	const isFixed = useRef(false);
 
 	useEffect(() => {
 		const handleScroll = () => {
-			const isONTOP = window.scrollY > DELTA
+			let isONTOP = window.scrollY > DELTA
 
 			if (isONTOP)
+			{
+				isFixed.current = true;
 				refHeader.current.classList.add('fixed');
+			}
 			else
+			{
+				isFixed.current = false;
 				refHeader.current.classList.remove('fixed');
+			}
 		}
-
-		handleScroll();
 
 		window.addEventListener("scroll", handleScroll);
 
@@ -56,7 +64,7 @@ const Header = ({ toggleMode, theme }) => {
 	}, [theme])
 
 	return (
-		<StyledHeader ref={refHeader} >
+		<StyledHeader ref={refHeader} className={isFixed.current ? 'fixed' : ''} >
 			<Flex alignItems='center' justifyContent='space-between' addCSS={Height} >
 				<Hamburger />
 				<Brand />
