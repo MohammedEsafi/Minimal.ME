@@ -10,7 +10,16 @@ const Nav = styled.nav`
 	color: ${({ theme }) => theme.primary};
 
 	${media.tablet`
-		display: none;
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+		min-height: 100vh;
+		padding-block: 150px;
+		background-color: ${({ theme }) => theme.surface};
+		z-index: -1;
+		transform: translateY(${({ menuOpen }) => menuOpen ? '0' : '-100%'});
+		/*box-shadow: 0 0 0 ${({ theme }) => theme.secondary};*/
 	`};
 `
 
@@ -23,15 +32,22 @@ const Lists = styled.ul`
 	display: flex;
 	margin: 0;
 	padding: 0;
+
+	${media.tablet`
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		min-height: calc(100vh - 300px);
+	`}
 `
 
 const Item = styled.li`
 	margin: 0 5px;
 `
 
-const Navigation = ({ toggleMode }) =>  (
+const Navigation = ({ menuOpen, toggleMode }) =>  (
 	<Flex gap='30px' alignItems='center' >
-		<Nav>
+		<Nav menuOpen={menuOpen} >
 			<Lists>
 				{navLinks &&
 					navLinks.map(({ name, url }, index) => (

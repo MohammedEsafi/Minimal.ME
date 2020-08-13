@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { Button, media } from '../styles';
+import { Button, media, theme } from '../styles';
+
+const { transition : { timing } } = theme;
 
 const addCSS = css`
 	display: none;
@@ -11,6 +13,7 @@ const addCSS = css`
 `
 
 const Pad = styled.div`
+	position: relative;
 	padding: 10px;
 	display: flex;
 	width: 40px;
@@ -20,14 +23,31 @@ const Pad = styled.div`
 `
 
 const Line = styled.span`
-	width: 100%;
+	width: 20px;
 	height: 2px;
 	background: ${({ theme }) => theme.primary};
+	transition: all 300ms ${timing};
+
+	.arrow-it &:first-child {
+		width: 10px;
+		transform: rotate(-35deg);
+		position: absolute;
+		top: 16px;
+		left: 10px;
+	}
+
+	.arrow-it &:last-child {
+		width: 10px;
+		transform: rotate(35deg);
+		position: absolute;
+		bottom: 16px;
+		left: 10px;
+	}
 `
 
-const Hamburger = () => (
-	<Button addCSS={addCSS} >
-		<Pad>
+const Hamburger = ({ menuOpen, toggleMenu }) => (
+	<Button addCSS={addCSS} onClick={toggleMenu} >
+		<Pad className={menuOpen ? 'arrow-it' : ''} >
 			<Line></Line>
 			<Line></Line>
 			<Line></Line>

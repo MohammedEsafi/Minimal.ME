@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css, withTheme } from 'styled-components';
 import { Flex, theme, media } from '../styles';
@@ -28,7 +28,7 @@ const StyledHeader = styled.header`
 
 	&.fixed {
 		height: ${navScrollHeight};
-		box-shadow: 0 0 1px ${({ theme }) => hex2rgba(theme.primary, 0.3)};
+		box-shadow: inset 0 0 1px ${({ theme }) => hex2rgba(theme.primary, 0.3)};
 	}
 `
 
@@ -39,6 +39,11 @@ const Height = css`
 const Header = ({ toggleMode, theme }) => {
 	const refHeader = useRef(null);
 	const isFixed = useRef(false);
+	const [menuOpen, setMenuOpen] = useState(false);
+
+	const toggleMenu = () => {
+		setMenuOpen(!menuOpen)
+	}
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -56,7 +61,7 @@ const Header = ({ toggleMode, theme }) => {
 			}
 		}
 
-		window.addEventListener("scroll", handleScroll);
+		window.addEventListener("scroll", handleScroll)
 
 		return () => {
 			window.removeEventListener("scroll", handleScroll)
@@ -66,9 +71,9 @@ const Header = ({ toggleMode, theme }) => {
 	return (
 		<StyledHeader ref={refHeader} className={isFixed.current ? 'fixed' : ''} >
 			<Flex alignItems='center' justifyContent='space-between' addCSS={Height} >
-				<Hamburger />
+				<Hamburger menuOpen={menuOpen} toggleMenu={toggleMenu} />
 				<Brand />
-				<Navigation toggleMode={toggleMode} />
+				<Navigation menuOpen={menuOpen} toggleMode={toggleMode} />
 			</Flex>
 		</StyledHeader>
 	)

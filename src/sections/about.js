@@ -6,7 +6,7 @@ import { Title } from '../components';
 const About = () => (
 	<Section id='about' >
 		<Flex flexDirection='column' >
-			<Title title='who am i ?' secondTitle='About' />
+			<Title title='who am i?' secondTitle='About' />
 			<Flex flexDirection='row' >
 				<Flex flexDirection='column' >
 					<p>Hey <span role='img' aria-label='hey' >👋</span> I'm Mohammed, a software engineer based in Morocco ! <span role='img' aria-label='Morocco' >🇲🇦</span></p>

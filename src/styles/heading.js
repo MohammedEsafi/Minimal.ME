@@ -18,7 +18,7 @@ const Heading = styled.h2`
 	&:after {
 		content: '<' attr(data-second-title) ' />';
 		position: absolute;
-		color: ${({ theme }) => hex2rgba(theme.primary, 0.07)};
+		color: ${({ theme }) => hex2rgba(theme.primary, 0.05)};
 		right: 0;
 		top: 0;
 		z-index: -1;
