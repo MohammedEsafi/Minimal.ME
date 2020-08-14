@@ -30,8 +30,8 @@ const Layout = ({ children }) => {
   return (
     mounted &&
     <div id="root">
+      <GlobalFonts />
       <ThemeProvider theme={themeMode} >
-        <GlobalFonts />
         <GlobalDefaults />
       	<SEO metadata={site.siteMetadata} />
         <Header toggleMode={toggleMode} />
