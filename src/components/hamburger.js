@@ -30,18 +30,18 @@ const Line = styled.span`
 
 	.arrow-it &:first-child {
 		width: 10px;
-		transform: rotate(-35deg);
+		transform: rotate(-45deg);
 		position: absolute;
 		top: 16px;
-		left: 10px;
+		left: 9px;
 	}
 
 	.arrow-it &:last-child {
 		width: 10px;
-		transform: rotate(35deg);
+		transform: rotate(45deg);
 		position: absolute;
 		bottom: 16px;
-		left: 10px;
+		left: 9px;
 	}
 `
 

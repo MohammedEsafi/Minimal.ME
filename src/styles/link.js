@@ -4,14 +4,12 @@ import PropTypes from 'prop-types';
 const Link = styled.a.attrs(props => ({
 	href: props.to,
 }))`
-	padding-block: ${props => props.paddingBlock};
-	padding-inline: ${props => props.paddingInline};
+	padding: ${props => props.padding};
 	${props => props?.addCSS};
 `
 
 Link.defaultProps = {
-	paddingBlock: '10px',
-	paddingInline: '10px',
+	padding: '10px',
 }
 
 Link.propTypes = {

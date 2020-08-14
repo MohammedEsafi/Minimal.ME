@@ -7,7 +7,7 @@ import { socialMedia } from '../config';
 const Container = styled.div`
 	position: fixed;
 	width: 40px;
-	padding-block: 40px;
+	padding: 40px 0;
 	bottom: 0;
 	height: 100%;
   left: 50px;

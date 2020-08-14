@@ -28,7 +28,8 @@ const StyledHeader = styled.header`
 
 	&.fixed {
 		height: ${navScrollHeight};
-		box-shadow: inset 0 0 1px ${({ theme }) => hex2rgba(theme.primary, 0.3)};
+		background-color: #fcfcfc;
+		box-shadow: 0 0 3px ${({ theme }) => hex2rgba(theme.primary, 0.15)};
 	}
 `
 

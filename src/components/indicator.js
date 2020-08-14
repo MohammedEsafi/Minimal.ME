@@ -9,7 +9,7 @@ const Container = styled.div`
 	--backgroundColor: ${({ theme }) => hex2rgba(theme.primary, 0.3)};
 	position: absolute;
 	width: 40px;
-	padding-block: 40px;
+	padding: 40px 0;
 	bottom: 0;
 	height: 100%;
   right: 50px;
