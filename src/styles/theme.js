@@ -3,7 +3,7 @@ const theme = {
 		light: {
 			primary: '#111111',
 			surface: '#F8F8F8',
-			secondary: '#edd892',
+			secondary: '#E6BE42', // edd892
 		},
 		dark: {
 			primary: '#F8F8F8',

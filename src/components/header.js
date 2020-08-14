@@ -28,7 +28,7 @@ const StyledHeader = styled.header`
 
 	&.fixed {
 		height: ${navScrollHeight};
-		background-color: #fcfcfc;
+		background-color: ${({ theme }) => theme.surface === '#F8F8F8' ? '#FCFCFC' : '#070707'} ;
 		box-shadow: 0 0 3px ${({ theme }) => hex2rgba(theme.primary, 0.15)};
 	}
 `
