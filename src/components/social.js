@@ -18,12 +18,19 @@ const Container = styled.div`
 	`};
 
   ${media.tablet`
-  	display: none;
+		position: initial;
+    width: initial;
+    padding: 0;
+    height: auto;
   `};
 `
 
 const addCSS = css`
 	height: 100%;
+
+	${media.tablet`
+		flex-direction: row;
+  `};
 `
 
 const Social = () => (

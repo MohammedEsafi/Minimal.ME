@@ -19,7 +19,6 @@ const Nav = styled.nav`
 		background-color: ${({ theme }) => theme.surface};
 		z-index: -1;
 		transform: translateY(${({ menuOpen }) => menuOpen ? '0' : '-100%'});
-		/*box-shadow: 0 0 0 ${({ theme }) => theme.secondary};*/
 	`};
 `
 

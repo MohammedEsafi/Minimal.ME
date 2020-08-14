@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SEO, Header, Mode, Social, Indicator, Footer } from '.';
+import { SEO, Header, Mode, Indicator, Footer } from '.';
 import GlobalStyle from '../styles';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../styles';
@@ -34,7 +34,6 @@ const Layout = ({ children }) => {
       	<SEO metadata={site.siteMetadata} />
     		<GlobalStyle />
         <Header toggleMode={toggleMode} />
-        <Social />
         <Indicator />
     		{children}
         <Footer />

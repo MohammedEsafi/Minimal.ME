@@ -33,7 +33,7 @@ const Line = styled.span`
 		transform: rotate(-45deg);
 		position: absolute;
 		top: 16px;
-		left: 9px;
+		left: 8px;
 	}
 
 	.arrow-it &:last-child {
@@ -41,7 +41,7 @@ const Line = styled.span`
 		transform: rotate(45deg);
 		position: absolute;
 		bottom: 16px;
-		left: 9px;
+		left: 8px;
 	}
 `
 
