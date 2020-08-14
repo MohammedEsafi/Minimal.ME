@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 import EinaLight from '../fonts/Eina/eina-light.ttf'
 import EinaRegular from '../fonts/Eina/eina-regular.ttf'
@@ -103,7 +103,7 @@ import SFMonoSemiboldItalicTTF from '../fonts/SFMono/SFMono-SemiboldItalic.ttf';
 import SFMonoSemiboldItalicWOFF from '../fonts/SFMono/SFMono-SemiboldItalic.woff';
 import SFMonoSemiboldItalicWOFF2 from '../fonts/SFMono/SFMono-SemiboldItalic.woff2';
 
-const Fonts = css`
+const Fonts = createGlobalStyle`
   @font-face {
     font-family: 'Calibre';
     src: url(${CalibreLightWOFF2}) format('woff2'), url(${CalibreLightWOFF}) format('woff'),

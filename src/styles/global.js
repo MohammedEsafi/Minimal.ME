@@ -1,12 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 import theme from './theme';
-import Fonts from './fonts';
 
 const { fonts } = theme;
 
 const Global = createGlobalStyle`
-	${Fonts};
-
 	html {
 		box-sizing: border-box;
 		width: 100%;

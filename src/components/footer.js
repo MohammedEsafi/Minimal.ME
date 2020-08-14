@@ -8,22 +8,22 @@ import { Social } from '.';
 const StyledFooter = styled(Section)`
 	padding: 25px 0;
 	width: 100%;
-	border-top: 1px solid ${({ theme }) => hex2rgba(theme.primary, 0.03)};
 
 	${media.tablet`
 		padding: 50px 0;
+		border-top: 1px solid ${({ theme }) => hex2rgba(theme.primary, 0.3)};
 	`};
 `
 
 const Text = styled.p`
 	padding: 0;
 	margin: 0;
-	color: ${({ theme }) => hex2rgba(theme.primary, 0.3)};
+	color: ${({ theme }) => theme.primary};
 `
 
 const Footer = () => (
 	<StyledFooter as='footer' >
-		<Flex justifyContent='center' alignItems='center' flexDirection='column' gap='10px' >
+		<Flex justifyContent='center' alignItems='center' flexDirection='column' gap='15px' >
 			<Social />
 			<Text>
 				Designed & Built by

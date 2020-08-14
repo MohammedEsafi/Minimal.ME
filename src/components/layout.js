@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { SEO, Header, Mode, Indicator, Footer } from '.';
-import GlobalStyle from '../styles';
+import { GlobalDefaults, GlobalFonts } from '../styles';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../styles';
 import { useStaticQuery, graphql } from 'gatsby';
@@ -31,8 +31,9 @@ const Layout = ({ children }) => {
     mounted &&
     <div id="root">
       <ThemeProvider theme={themeMode} >
+        <GlobalFonts />
+        <GlobalDefaults />
       	<SEO metadata={site.siteMetadata} />
-    		<GlobalStyle />
         <Header toggleMode={toggleMode} />
         <Indicator />
     		{children}

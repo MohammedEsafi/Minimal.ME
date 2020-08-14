@@ -30,6 +30,7 @@ const addCSS = css`
 
 	${media.tablet`
 		flex-direction: row;
+		justify-content: center;
   `};
 `
 
