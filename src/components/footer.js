@@ -23,7 +23,7 @@ const Text = styled.p`
 
 const Footer = () => (
 	<StyledFooter as='footer' >
-		<Flex justifyContent='center' alignItems='center' flexDirection='column' gap='15px' >
+		<Flex justifyContent='center' alignItems='center' flexDirection='column' gap='25px' >
 			<Social />
 			<Text>
 				Designed & Built by
