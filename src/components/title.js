@@ -9,7 +9,7 @@ const addCSS = css`
 		stroke-dashoffset: 2e-05;
     stroke-dasharray: none;
     fill: none;
-    stroke: #1c1b20;
+    stroke: ${({ theme }) => theme.primary};
     stroke-width: 5px;
 	}
 `
