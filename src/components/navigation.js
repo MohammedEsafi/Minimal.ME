@@ -11,6 +11,7 @@ const Nav = styled.nav`
 	margin-right: 30px;
 
 	${media.tablet`
+		margin-right: 0;
 		position: absolute;
 		width: 100%;
 		top: 0;
