@@ -68,6 +68,7 @@ const Navigation = ({ menuOpen, toggleMode }) =>  (
 )
 
 Navigation.propTypes = {
+	menuOpen: PropTypes.bool.isRequired,
 	toggleMode: PropTypes.func.isRequired,
 }
 

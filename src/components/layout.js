@@ -28,17 +28,19 @@ const Layout = ({ children }) => {
   const themeMode = (mode === 'light' ? light : dark)
 
   return (
-    mounted &&
     <div id="root">
       <GlobalFonts />
-      <ThemeProvider theme={themeMode} >
-        <GlobalDefaults />
-      	<SEO metadata={site.siteMetadata} />
-        <Header toggleMode={toggleMode} />
-        <Indicator />
-    		{children}
-        <Footer />
-      </ThemeProvider>
+      {
+        mounted &&
+        <ThemeProvider theme={themeMode} >
+          <GlobalDefaults />
+        	<SEO metadata={site.siteMetadata} />
+          <Header toggleMode={toggleMode} />
+          <Indicator />
+      		{children}
+          <Footer />
+        </ThemeProvider>
+      }
     </div>
   )
 }

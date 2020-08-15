@@ -5,8 +5,20 @@ const SVG = styled.svg.attrs({
 	role: 'img',
 })`
 	fill: ${props => props.fill};
-	width: ${props => props.side}; 
-	height: ${props => props.side};
+
+	width: ${({ side }) => (
+		side.split(" ")[0]
+	)}; 
+
+	height: ${({ side }) => {
+		side = side.split(" ")
+
+		if (side.lenght === 1)
+			return side[0]
+		else
+			return side[1]
+	}};
+
 	${props => props?.addCSS};
 	pointer-events: none;
 `

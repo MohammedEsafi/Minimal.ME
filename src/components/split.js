@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { theme } from '../styles';
 
 const { transition : { timing } } = theme;
@@ -49,6 +50,10 @@ const Split = ({ text }) => {
 			})}
 		</Fragment>
 	)
+}
+
+Split.propTypes = {
+	text: PropTypes.string.isRequired,
 }
 
 export default Split;

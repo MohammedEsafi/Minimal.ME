@@ -39,7 +39,7 @@ const Social = () => (
 		<Flex justifyContent='flex-end' alignItems='center' flexDirection='column' addCSS={addCSS} >
 			{socialMedia &&
 				socialMedia.map(({ name, url }, index) => (
-					<Link key={index} to={url} >
+					<Link key={index} to={url} target='_blank' >
 						<Icons name={name} side='20px' />
 					</Link>
 				))}

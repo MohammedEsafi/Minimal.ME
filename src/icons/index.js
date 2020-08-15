@@ -6,6 +6,7 @@ import Twitter from './twitter';
 import Dribbble from './dribbble';
 import Arrow from './arrow';
 import External from './external';
+import Waves from './waves';
 
 const Icons = ({ name, fill, side, addCSS }) => {
 	const props = { fill, side, addCSS };
@@ -23,6 +24,8 @@ const Icons = ({ name, fill, side, addCSS }) => {
 			return <Arrow.down { ...props } />;
 		case 'external':
 			return <External { ...props } />;
+		case 'waves':
+			return <Waves { ...props } />;
 		default:
 			return null;
 	}
