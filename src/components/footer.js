@@ -6,24 +6,33 @@ import { hex2rgba } from '../utils';
 import { Social } from '.';
 
 const StyledFooter = styled(Section)`
-	padding: 25px 0;
+	padding: 25px 100px;
 	width: 100%;
 
 	${media.tablet`
-		padding: 50px 0;
+		padding: 50px;
 		border-top: 1px solid ${({ theme }) => hex2rgba(theme.primary, 0.3)};
+	`};
+	
+	${media.phone`
+		padding: 50px 25px;
 	`};
 `
 
 const Text = styled.p`
 	padding: 0;
 	margin: 0;
+	text-align: center;
 	color: ${({ theme }) => theme.primary};
+
+	${media.tablet`
+		margin-top: 15px;
+	`};
 `
 
 const Footer = () => (
 	<StyledFooter as='footer' >
-		<Flex justifyContent='center' alignItems='center' flexDirection='column' gap='25px' >
+		<Flex justifyContent='center' alignItems='center' flexDirection='column' >
 			<Social />
 			<Text>
 				Designed & Built by

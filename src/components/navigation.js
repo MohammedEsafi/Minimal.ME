@@ -8,6 +8,7 @@ import { Link as GatsbyLink } from 'gatsby';
 
 const Nav = styled.nav`
 	color: ${({ theme }) => theme.primary};
+	margin-right: 30px;
 
 	${media.tablet`
 		position: absolute;
@@ -45,7 +46,7 @@ const Item = styled.li`
 `
 
 const Navigation = ({ menuOpen, toggleMode }) =>  (
-	<Flex gap='30px' alignItems='center' >
+	<Flex alignItems='center' >
 		<Nav menuOpen={menuOpen} >
 			<Lists>
 				{navLinks &&
