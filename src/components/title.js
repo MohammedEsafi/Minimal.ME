@@ -14,12 +14,12 @@ const addCSS = css`
 	}
 `
 
-const Title = ({ title, splittedTitle }) => (
+const Title = ({ title, ariaLabel }) => (
 	<Fragment>
 		<Icons name='waves' side='50px auto' addCSS={addCSS} />
-		<Heading aria-label={title}>
-			{splittedTitle &&
-				[...splittedTitle].map((text, index) => (
+		<Heading aria-label={ariaLabel}>
+			{title &&
+				[...title].map((text, index) => (
 					<span key={index}>
 						{text}
 					</span>
@@ -31,6 +31,7 @@ const Title = ({ title, splittedTitle }) => (
 
 Title.propTypes = {
 	title: PropTypes.string.isRequired,
+	splittedTitle: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
 
 export default Title;

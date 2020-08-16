@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { theme, Section, media } from '../styles';
-
-const { fonts } = theme;
+import { Section, media } from '../styles';
 
 const Container = styled(Section)`
 	min-height: 100vh;
@@ -16,10 +14,10 @@ const Container = styled(Section)`
 
 const Headline = styled.h1`
 	position: relative;
-	font-size: 12rem;
-	line-height: 1.1;
+	font-size: 15rem;
+	text-transform: uppercase;
+	line-height: 1.4;
 	margin: 0;
-	font-family: ${fonts.secondary};
 
 	${media.tablet`
 		font-size: 11.5rem;
@@ -30,21 +28,26 @@ const Headline = styled.h1`
 	`};
 `
 
-const Description = styled.p`
-	margin: 0;
-	text-align: center;
+const Description = styled.div`
+	p {
+		margin: 0;
+		text-align: center;
+	}
 `
 
-const Hero = ({ headline, description }) => (
-	<Container>
-		<Headline>{ headline }</Headline>
-		<Description dangerouslySetInnerHTML={{ __html: description }} />
-	</Container>
-)
+const Hero = ({ data }) => {
+	const { frontmatter, html } = data[0].node;
+
+	return (
+		<Container>
+			<Headline>{ frontmatter.headline }</Headline>
+			<Description dangerouslySetInnerHTML={{ __html: html }} />
+		</Container>
+	)
+}
 
 Hero.propTypes = {
-	headline: PropTypes.string.isRequired,
-	description: PropTypes.string.isRequired,
+	data: PropTypes.object.isRequired,
 }
 
 export default Hero;

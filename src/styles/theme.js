@@ -15,7 +15,7 @@ const theme = {
 			secondary: '#FCB97D',
 			header: {
 				background: '#070707',
-				shadowOpacity: 0.05,
+				shadowOpacity: 0.2,
 			}
 		},
 		defaultTheme: 'light',

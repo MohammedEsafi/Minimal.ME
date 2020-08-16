@@ -59,9 +59,11 @@ const Line = styled.span`
 const Hamburger = ({ menuOpen, toggleMenu }) => (
 	<Button addCSS={addCSS} onClick={toggleMenu} >
 		<Pad className={menuOpen ? 'arrow-it' : ''} >
-			<Line></Line>
-			<Line></Line>
-			<Line></Line>
+			{
+				[...Array(3)].map((value, index) => (
+					<Line key={index} />
+				))
+			}
 		</Pad>
 	</Button>
 )

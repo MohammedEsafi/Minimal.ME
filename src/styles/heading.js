@@ -7,7 +7,6 @@ const Heading = styled.h2`
 	line-height: 1.1;
 	font-weight: 900;
 	flex-direction: column;
-	text-transform: uppercase;
 	position: relative;
 	user-select: none;
 
