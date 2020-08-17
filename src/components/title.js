@@ -30,8 +30,8 @@ const Title = ({ title, ariaLabel }) => (
 )
 
 Title.propTypes = {
-	title: PropTypes.string.isRequired,
-	splittedTitle: PropTypes.arrayOf(PropTypes.string).isRequired,
+	ariaLabel: PropTypes.string.isRequired,
+	title: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
 
 export default Title;

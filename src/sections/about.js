@@ -1,7 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { css } from 'styled-components';
 import { Section, Flex, External } from '../styles';
 import Icons from '../icons';
 import { Title } from '../components';
+import Img from 'gatsby';
 
 /*<p>Hey <span role='img' aria-label='hey' >👋</span> I'm Mohammed, a software engineer based in Morocco ! <span role='img' aria-label='Morocco' >🇲🇦</span></p>
 						<p>I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.</p>
@@ -13,7 +16,37 @@ import { Title } from '../components';
 							</External>
 						</p>*/
 
-const About = ({ data }) => {
+const addCSS = css`
+	height: 100px;
+	opacity: 0.4;
+	margin: 50px 0;
+
+	span:first-child {
+		background: linear-gradient(${({ theme }) => theme.surface}, ${({ theme }) => theme.primary});
+    width: 1px;
+    flex: 1;
+	}
+
+	span:last-child {
+		background: transparent;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1.5px ${({ theme }) => theme.primary} inset;
+   }
+`
+
+const textCenter = css`
+	text-align: center;
+`
+
+const skillsSection = css`
+	div {
+		padding: 1.8rem;
+	}
+`
+
+const About = ({ data, skills }) => {
 	const { frontmatter, html } = data[0].node;
 
 	return (
@@ -24,8 +57,30 @@ const About = ({ data }) => {
 					<Flex flexDirection='column' dangerouslySetInnerHTML={{ __html: html }} />
 				</Flex>
 			</Flex>
+			<Flex flexDirection='column' alignItems='center' addCSS={addCSS} >
+				{[...Array(2)].map((value, index) => (
+					<span key={index} ></span>
+				))}
+			</Flex>
+			<Flex flexDirection='column' alignItems='center' >
+				<p styles={textCenter} >Here are a few technologies I've been working with</p>
+				<Flex justifyContent='center' addCSS={skillsSection} >
+					<div>
+						<img src={skills[0].node.publicURL} alt={skills[0].node.name.split('.')[1]} />
+					</div>
+					<div>1</div>
+					<div>1</div>
+					<div>1</div>
+					<div>1</div>
+				</Flex>
+			</Flex>
 		</Section>
 	)
+}
+
+About.propTypes = {
+	data: PropTypes.array.isRequired,
+	skills: PropTypes.array.isRequired,
 }
 
 export default About;

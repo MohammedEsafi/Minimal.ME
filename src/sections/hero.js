@@ -47,7 +47,7 @@ const Hero = ({ data }) => {
 }
 
 Hero.propTypes = {
-	data: PropTypes.object.isRequired,
+	data: PropTypes.array.isRequired,
 }
 
 export default Hero;

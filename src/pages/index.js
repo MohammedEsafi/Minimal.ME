@@ -9,7 +9,7 @@ const IndexPage = ({ data }) => (
 	<Layout>
 		<Main>
 			<Hero data={data.hero.edges} />
-			<About data={data.about.edges} />
+			<About data={data.about.edges} skills={data.skills.edges} />
 		</Main>
 	</Layout>
 )
@@ -41,6 +41,14 @@ export const pageQuery = graphql`
 			    }
 			    html
 	    	}
+	    }
+	  }
+	  skills: allFile(filter: {absolutePath: {regex: "/skills/"}}, sort: {fields: name, order: ASC}) {
+	    edges {
+	      node {
+	        name
+	        publicURL
+	      }
 	    }
 	  }
 	}
