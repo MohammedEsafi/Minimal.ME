@@ -35,9 +35,9 @@ const addCSS = css`
    }
 `
 
-const textCenter = css`
-	text-align: center;
-`
+const textCenter = {
+	textAlign: 'center',
+}
 
 const List = styled.ul`
 	--foreground: ${({ theme }) => theme.primary};
@@ -48,7 +48,14 @@ const List = styled.ul`
   padding: 0;
 
 	li {
-		padding: 1.8rem;
+		margin: 1.8rem;
+    min-width: 34px;
+    display: flex;
+    justify-content: center;
+
+		svg {
+			height: 34px;
+		}
 	}
 `
 
@@ -75,7 +82,7 @@ const About = ({ data, skills }) => {
 				))}
 			</Flex>
 			<Flex flexDirection='column' alignItems='center' >
-				<p styles={textCenter} >Here are a few technologies I've been working with</p>
+				<p style={textCenter} >Here are a few technologies I've been working with</p>
 				<List>
 					{skills && skills.map(({ node }, index) => (
 						<Item key={index} relativePath={node.relativePath} />
