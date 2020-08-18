@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Section, Flex, External } from '../styles';
 import Icons from '../icons';
 import { Title } from '../components';
-import Img from 'gatsby';
 
 /*<p>Hey <span role='img' aria-label='hey' >👋</span> I'm Mohammed, a software engineer based in Morocco ! <span role='img' aria-label='Morocco' >🇲🇦</span></p>
 						<p>I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.</p>
@@ -40,11 +39,24 @@ const textCenter = css`
 	text-align: center;
 `
 
-const skillsSection = css`
-	div {
+const List = styled.ul`
+	--foreground: ${({ theme }) => theme.primary};
+	--background: ${({ theme }) => theme.surface};
+	display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+	li {
 		padding: 1.8rem;
 	}
 `
+
+const Item = ({ relativePath,  ...props }) => {
+  const svg = require(`!raw-loader!../images/${relativePath}`).default;
+
+  return <li {...props} dangerouslySetInnerHTML={{ __html: svg }}/>;
+};
 
 const About = ({ data, skills }) => {
 	const { frontmatter, html } = data[0].node;
@@ -64,15 +76,11 @@ const About = ({ data, skills }) => {
 			</Flex>
 			<Flex flexDirection='column' alignItems='center' >
 				<p styles={textCenter} >Here are a few technologies I've been working with</p>
-				<Flex justifyContent='center' addCSS={skillsSection} >
-					<div>
-						<img src={skills[0].node.publicURL} alt={skills[0].node.name.split('.')[1]} />
-					</div>
-					<div>1</div>
-					<div>1</div>
-					<div>1</div>
-					<div>1</div>
-				</Flex>
+				<List>
+					{skills && skills.map(({ node }, index) => (
+						<Item key={index} relativePath={node.relativePath} />
+					))}
+				</List>
 			</Flex>
 		</Section>
 	)

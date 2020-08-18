@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { SEO, Header, Mode, Indicator, Footer } from '.';
 import { GlobalDefaults, GlobalFonts } from '../styles';
@@ -22,6 +22,14 @@ const Layout = ({ children }) => {
       }
     `
   )
+
+  useState(() => {
+    console.log('V1');
+
+    console.log('Check out our code here: https://github.com/MohammedEsafi/V1');
+
+    console.log('Have a great day! 📣🐢');
+  }, [])
 
   const [mode, toggleMode, mounted] = Mode()
 

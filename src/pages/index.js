@@ -47,7 +47,7 @@ export const pageQuery = graphql`
 	    edges {
 	      node {
 	        name
-	        publicURL
+	        relativePath
 	      }
 	    }
 	  }

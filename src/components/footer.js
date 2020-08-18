@@ -11,7 +11,7 @@ const StyledFooter = styled(Section)`
 
 	${media.tablet`
 		padding: 50px;
-		border-top: 1px solid ${({ theme }) => hex2rgba(theme.primary, 0.3)};
+		box-shadow: 0 1px ${({ theme }) => hex2rgba(theme.primary, 0.1)} inset;
 	`};
 	
 	${media.phone`
