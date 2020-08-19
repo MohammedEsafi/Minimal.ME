@@ -46,6 +46,8 @@ const List = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
+	flex-wrap: wrap;
+	justify-content: center;
 
 	li {
 		margin: 1.8rem;
@@ -81,7 +83,7 @@ const About = ({ data, skills }) => {
 					<span key={index} ></span>
 				))}
 			</Flex>
-			<Flex flexDirection='column' alignItems='center' >
+			<Flex flexDirection='column'>
 				<p style={textCenter} >Here are a few technologies I've been working with recently</p>
 				<List>
 					{skills && skills.map(({ node }, index) => (
