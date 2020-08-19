@@ -1,11 +1,13 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { Title } from '../components';
-import { Grid, Section, Flex } from '../styles';
+import { Grid, Section, Flex, media } from '../styles';
+import { hex2rgba } from '../utils';
 
 const addCSS = css`
 	--pad: 10px;
 	list-style: none;
+	display: none;
 	padding: 0;
 	margin: 0;
 	grid-auto-rows: 1fr;
@@ -62,6 +64,42 @@ const contentCSS = css`
 	}
 `
 
+const nodeCSS = css`
+	border-bottom: 1px solid ${({ theme }) => hex2rgba(theme.primary, 0.1)};
+	flex-wrap: wrap;
+	padding: 18px 0;
+`
+
+const SUBTitle = styled.div`
+	width: 150px;
+	font-weight: 600;
+`
+
+const Stars = styled.div`
+	width: 100px;
+	text-align: right;
+`
+
+const Description = styled.p`
+	flex: 1;
+	margin: 0;
+
+	${media.desktop`
+		order: 2;
+    flex: 1 1 100%;
+	`}
+`
+
+const Noteworthy = () => (
+	<Flex flexDirection='column' >
+		<Flex flexDirection='row' justifyContent='space-between' addCSS={nodeCSS} >
+			<SUBTitle>FOLDSettings</SUBTitle>
+			<Description>A cleanup script to free some memory on your 42 session / workstation </Description>
+			<Stars>5669 ★</Stars>
+		</Flex>
+	</Flex>
+)
+
 const Projects = () => (
 	<Section id='projects' >
 		<Title title={['W', 'ORK']} ariaLabel='projects' />
@@ -86,6 +124,9 @@ const Projects = () => (
 				</li>
 			))}
 		</Grid>
+		<Noteworthy />
+		<Noteworthy />
+		<Noteworthy />
 	</Section>
 )
 
