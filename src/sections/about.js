@@ -82,7 +82,7 @@ const About = ({ data, skills }) => {
 				))}
 			</Flex>
 			<Flex flexDirection='column' alignItems='center' >
-				<p style={textCenter} >Here are a few technologies I've been working with</p>
+				<p style={textCenter} >Here are a few technologies I've been working with recently</p>
 				<List>
 					{skills && skills.map(({ node }, index) => (
 						<Item key={index} relativePath={node.relativePath} />
