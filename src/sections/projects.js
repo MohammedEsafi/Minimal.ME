@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { Title } from '../components';
-import { Grid, Section, Flex, media } from '../styles';
+import { Grid, Section, Flex, media, Link } from '../styles';
 import { hex2rgba } from '../utils';
 
 const addCSS = css`
@@ -72,7 +72,7 @@ const nodeCSS = css`
 
 const SUBTitle = styled.div`
 	width: 150px;
-	font-weight: 600;
+	font-weight: 500;
 `
 
 const Stars = styled.div`
@@ -82,21 +82,24 @@ const Stars = styled.div`
 
 const Description = styled.p`
 	flex: 1;
-	margin: 0;
+	margin-bottom: 0;
 
 	${media.desktop`
 		order: 2;
     flex: 1 1 100%;
+    margin-top: 9px;
 	`}
 `
 
 const Noteworthy = () => (
 	<Flex flexDirection='column' >
-		<Flex flexDirection='row' justifyContent='space-between' addCSS={nodeCSS} >
-			<SUBTitle>FOLDSettings</SUBTitle>
-			<Description>A cleanup script to free some memory on your 42 session / workstation </Description>
-			<Stars>5669 ★</Stars>
-		</Flex>
+		<Link to='/#' padding='0' >
+			<Flex flexDirection='row' justifyContent='space-between' addCSS={nodeCSS} >
+				<SUBTitle>FOLDSettings</SUBTitle>
+				<Description>A cleanup script to free some memory on your 42 session / workstation </Description>
+				<Stars>5669 ★</Stars>
+			</Flex>
+		</Link>
 	</Flex>
 )
 
