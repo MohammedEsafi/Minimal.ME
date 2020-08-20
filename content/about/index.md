@@ -7,8 +7,8 @@ shownTitle:
 
 Hey <span role="img" aria-label="Hey">👋</span> I'm Mohammed, a software engineer based in Morocco ! <span role="img" aria-label="Morocco">🇲🇦</span>
 
-I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.
+I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between with a strong interest in creative coding, design & Tech inclusion & I'm super excited about automate the boring stuff.
 
-Shortly after graduating from Northeastern University, I joined the engineering team at Upstatement where I work on a wide variety of interesting and meaningful projects on a daily basis.
+I love thing about JavaScript, Python and Flutter <span role="img" aria-label="Love">❤️</span> but I'm also fascinated by getting my hands dirty with other technologies, as I like to learn and discover new stuff everyday.
 
-Here are a few technologies I've been working with — [MY RESUME](https://google.com)
+Interested in learning more about me! — [MY RESUME](https://google.com)

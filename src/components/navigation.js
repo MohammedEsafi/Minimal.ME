@@ -18,7 +18,6 @@ const Nav = styled.nav`
 		left: 0;
 		min-height: 100vh;
 		padding: 150px 0;
-		background-color: ${({ theme }) => theme.surface};
 		z-index: -1;
 		transform: translateY(${({ menuOpen }) => menuOpen ? '0' : '-100%'});
 	`};
