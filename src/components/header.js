@@ -28,10 +28,7 @@ const StyledHeader = styled.header`
 
 	&.fixed {
 		height: ${navScrollHeight};
-
-		${({ menuOpen }) => !menuOpen && css`
-			box-shadow: 0 1px ${({ theme }) => hex2rgba(theme.primary, 0.1)};
-		`}
+		box-shadow: ${({ theme }) => hex2rgba(theme.primary, 0.1)} 0 -1px inset;
 	}
 `
 
@@ -72,7 +69,7 @@ const Header = ({ toggleMode, theme }) => {
 	}, [theme])
 
 	return (
-		<StyledHeader menuOpen={menuOpen} ref={refHeader} className={isFixed.current ? 'fixed' : ''} >
+		<StyledHeader ref={refHeader} className={isFixed.current ? 'fixed' : null} >
 			<Flex alignItems='center' justifyContent='space-between' addCSS={Height} >
 				<Hamburger menuOpen={menuOpen} toggleMenu={toggleMenu} />
 				<Brand />

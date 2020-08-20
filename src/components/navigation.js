@@ -21,7 +21,7 @@ const Nav = styled.nav`
 		min-height: 100vh;
 		padding: 150px 0;
 		z-index: -1;
-		transform: translateY(${({ menuOpen }) => menuOpen ? '0' : '-100%'});
+		visibility: ${({ menuOpen }) => menuOpen ? 'visible' : 'hidden'};
 	`};
 `
 
@@ -55,11 +55,11 @@ const Background = styled.div`
 	height: 0;
 	z-index: -1;
 	box-shadow: 0 0 0 0 ${({ theme }) => theme.surface} inset;
-	background-color: ${({ theme }) => theme.secondary};
+	background-color: ${({ theme }) => theme.navigation};
 	transition: height 500ms ${timing}, box-shadow 1s ${timing};
 
 	&.open {
-		height: 100vh;
+		height: 100%;
 		box-shadow: 0 0 0 5px ${({ theme }) => theme.surface} inset;
 	}
 `
@@ -67,7 +67,7 @@ const Background = styled.div`
 const Navigation = ({ menuOpen, toggleMode }) =>  (
 	<Flex alignItems='center' >
 		<Nav menuOpen={menuOpen} >
-			<Background className={menuOpen ? 'open' : ''} />
+			<Background className={menuOpen ? 'open' : null} />
 			<Lists>
 				{navLinks &&
 					navLinks.map(({ name, url }, index) => (

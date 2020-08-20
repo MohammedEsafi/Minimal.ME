@@ -4,11 +4,13 @@ const theme = {
 			primary: '#111111',
 			surface: '#F8F8F8',
 			secondary: '#E6BE42',
+			navigation: '#edd892',
 		},
 		dark: {
 			primary: '#F8F8F8',
 			surface: '#111111',
 			secondary: '#FCB97D',
+			navigation: '#FCB97D',
 		},
 		defaultTheme: 'light',
 	},

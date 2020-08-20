@@ -118,7 +118,7 @@ const Projects = () => (
 							<p>
 								DISCRIPTION
 								{
-									(index & 1) ? <p>OTHER TEXT <br /> OTHER TEXT</p> : null
+									(index & 1) ? <span>OTHER TEXT <br /> OTHER TEXT</span> : null
 								}
 							</p>
 							<Flex>BOTTOM</Flex>
