@@ -22,6 +22,7 @@ const Nav = styled.nav`
 		padding: 150px 0;
 		z-index: -1;
 		visibility: ${({ menuOpen }) => menuOpen ? 'visible' : 'hidden'};
+		transition-delay: ${({ menuOpen }) => menuOpen ? '0' : '500ms'};
 	`};
 `
 
