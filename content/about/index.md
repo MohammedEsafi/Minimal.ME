@@ -7,7 +7,7 @@ shownTitle:
 
 Hey <span role="img" aria-label="Hey">👋</span> I'm Mohammed, a software engineer based in Morocco ! <span role="img" aria-label="Morocco">🇲🇦</span>
 
-I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between with a strong interest in creative coding, design & Tech inclusion & I'm super excited about automate the boring stuff.
+I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between with a strong interest in creative coding, design & Tech inclusion.
 
 I love thing about JavaScript, Python and Flutter <span role="img" aria-label="Love">❤️</span> but I'm also fascinated by getting my hands dirty with other technologies, as I like to learn and discover new stuff everyday.
 

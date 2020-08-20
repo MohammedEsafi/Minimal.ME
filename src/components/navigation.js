@@ -60,7 +60,7 @@ const Background = styled.div`
 	transition: height 500ms ${timing}, box-shadow 1s ${timing};
 
 	&.open {
-		height: 100vh;
+		height: calc(var(--vh, 1vh) * 100);
 		box-shadow: 0 0 0 5px ${({ theme }) => theme.surface} inset;
 	}
 `
