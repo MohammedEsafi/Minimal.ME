@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Flex, Button, media } from '../styles';
+import { Flex, Button, media, theme } from '../styles';
 import { Switcher, Split } from '.';
 import { navLinks } from '../config';
 import { Link as GatsbyLink } from 'gatsby';
+
+const { transition: { timing } } = theme;
 
 const Nav = styled.nav`
 	color: ${({ theme }) => theme.primary};
@@ -45,9 +47,27 @@ const Item = styled.li`
 	margin: 0 5px;
 `
 
+const Background = styled.div`
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 0;
+	z-index: -1;
+	box-shadow: 0 0 0 0 ${({ theme }) => theme.surface} inset;
+	background-color: ${({ theme }) => theme.secondary};
+	transition: height 500ms ${timing}, box-shadow 1s ${timing};
+
+	&.open {
+		height: 100vh;
+		box-shadow: 0 0 0 5px ${({ theme }) => theme.surface} inset;
+	}
+`
+
 const Navigation = ({ menuOpen, toggleMode }) =>  (
 	<Flex alignItems='center' >
 		<Nav menuOpen={menuOpen} >
+			<Background className={menuOpen ? 'open' : ''} />
 			<Lists>
 				{navLinks &&
 					navLinks.map(({ name, url }, index) => (

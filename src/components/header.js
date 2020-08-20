@@ -33,11 +33,6 @@ const StyledHeader = styled.header`
 			box-shadow: 0 1px ${({ theme }) => hex2rgba(theme.primary, 0.1)};
 		`}
 	}
-
-	${({ menuOpen }) => menuOpen && css`
-		box-shadow: 0 0 0 100vh ${({ theme }) => hex2rgba(theme.surface, 1)},
-								0 0 0 200vh ${({ theme }) => hex2rgba(theme.secondary, 1)};
-	`}
 `
 
 const Height = css`
