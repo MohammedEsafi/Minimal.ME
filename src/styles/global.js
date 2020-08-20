@@ -8,7 +8,6 @@ const Global = createGlobalStyle`
 		box-sizing: border-box;
 		width: 100%;
 		font-size: 10px;
-		height: -webkit-fill-available;
 	}
 
 	*,
@@ -28,8 +27,6 @@ const Global = createGlobalStyle`
 		font-size: 1.8rem;
 		line-height: 1.8;
 		font-family: ${fonts.primary};
-		min-height: 100vh;
-		min-height: -webkit-fill-available;
 	}
 
 	a {
