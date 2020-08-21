@@ -7,7 +7,6 @@ const External = styled.a.attrs(props => ({
 }))`
 	color: ${({ theme }) => theme.secondary};
 	padding: 0;
-
 	&:active, &:focus {
 		outline: none;
 	}

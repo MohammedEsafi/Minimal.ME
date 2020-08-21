@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import ReactDOMServer from 'react-dom/server';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { Section, Flex, External } from '../styles';
+import { Section, Flex } from '../styles';
 import Icons from '../icons';
 import { Title } from '../components';
 
-/*<p>Hey <span role='img' aria-label='hey' >👋</span> I'm Mohammed, a software engineer based in Morocco ! <span role='img' aria-label='Morocco' >🇲🇦</span></p>
-						<p>I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.</p>
-						<p>Shortly after graduating from Northeastern University, I joined the engineering team at Upstatement where I work on a wide variety of interesting and meaningful projects on a daily basis.</p>
-						<p>Here are a few technologies I've been working with — 
-							<External to='/resume.pdf' rel="nofollow noopener noreferrer" >
-								<span>&nbsp;MY RESUME&nbsp;</span>
-								<Icons name='external' side='1.4rem' />
-							</External>
-						</p>*/
+const contentCSS = css`
+	a {
+		color: ${({ theme }) => theme.secondary};
+		padding: 0;
+
+		&:active, &:focus {
+			outline: none;
+		}
+	}
+`
 
 const addCSS = css`
 	height: 100px;
@@ -69,13 +71,22 @@ const Item = ({ relativePath,  ...props }) => {
 
 const About = ({ data, skills }) => {
 	const { frontmatter, html } = data[0].node;
+	
+	const contentRef = useCallback(node => {
+		if (node !== null)
+		{
+			let links = node.getElementsByTagName('a');
+			for (let item of links)
+				item.innerHTML += ' ' + ReactDOMServer.renderToString(<Icons name='external' side='1.4rem' />);
+		}
+	}, [])
 
 	return (
 		<Section id='about' >
 			<Flex flexDirection='column' >
 				<Title title={frontmatter.shownTitle} ariaLabel={frontmatter.title} />
 				<Flex flexDirection='row' >
-					<Flex flexDirection='column' dangerouslySetInnerHTML={{ __html: html }} />
+					<Flex ref={contentRef} flexDirection='column' addCSS={contentCSS} dangerouslySetInnerHTML={{ __html: html }} />
 				</Flex>
 			</Flex>
 			<Flex flexDirection='column' alignItems='center' addCSS={addCSS} >

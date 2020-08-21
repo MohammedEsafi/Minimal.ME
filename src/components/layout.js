@@ -24,11 +24,15 @@ const Layout = ({ children }) => {
   )
 
   useState(() => {
-    console.log('V1');
+    let year = (new Date()).getFullYear();
 
-    console.log('Check out our code here: https://github.com/MohammedEsafi/V1');
+    console.log(`All rights are reserved — ${year} — Made with 🖤❤️ by %cMohammed Esafi`, 'font-style: italic');
 
-    console.log('Have a great day! 📣🐢');
+    console.log('This website was coded using Gatsby, React, GraphQL and hosted on Netlify');
+
+    console.log('Open sourced on: https://github.com/MohammedEsafi/V1');
+
+    console.log('Have a great day! 😘');
   }, [])
 
   const [mode, toggleMode, mounted] = Mode()

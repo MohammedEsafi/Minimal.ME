@@ -9,5 +9,5 @@ export { default as Main } from './main';
 export { default as Section } from './section';
 export { default as SVG } from './svg';
 export { default as Link } from './link';
-export { default as External } from './external';
 export { default as Heading } from './heading';
+export { default as External } from './external';
