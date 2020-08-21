@@ -62,17 +62,15 @@ const Header = ({ toggleMode, theme }) => {
 		}
 
 		const handleResize = () => {
-			document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
+			setMenuOpen(false);
 		}
 
 		window.addEventListener("scroll", handleScroll)
 		window.addEventListener('resize', handleResize)
-		window.addEventListener('orientationchange', handleResize)
 
 		return () => {
 			window.removeEventListener("scroll", handleScroll)
 			window.removeEventListener('resize', handleResize)
-			window.removeEventListener('orientationchange', handleResize)
 		};
 	}, [theme])
 

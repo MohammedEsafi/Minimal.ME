@@ -26,7 +26,9 @@ const Line = styled.span`
 	position: absolute;
 	transform: translateY(-50%);
 	background: ${({ theme }) => theme.primary};
-	transition: all 300ms ${timing};
+	transition-property: transform, top, left, width;
+	transition-duration: 300ms;
+	transition-timing-function: ${timing};
 	left: 0;
 
 	&:first-child {
@@ -58,7 +60,7 @@ const Line = styled.span`
 
 const Hamburger = ({ menuOpen, toggleMenu }) => (
 	<Button addCSS={addCSS} onClick={toggleMenu} >
-		<Pad className={menuOpen ? 'arrow-it' : ''} >
+		<Pad className={menuOpen ? 'arrow-it' : null} >
 			{
 				[...Array(3)].map((value, index) => (
 					<Line key={index} />

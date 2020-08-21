@@ -41,6 +41,10 @@ const Global = createGlobalStyle`
 		margin: 0px 0px 1.8rem;
 	}
 
+	span[role="img"][aria-label] {
+		font-family: initial;
+	}
+
 	#root {
 		min-height: 100vh;
 		display: grid;
