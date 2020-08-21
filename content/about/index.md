@@ -9,9 +9,6 @@ Hey <span role="img" aria-label="Hey">👋</span> I'm Mohammed, a software engin
 
 I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between with a strong interest in creative coding, design & Tech inclusion.
 
-I love thing about JavaScript, Python and Flutter <span role="img" aria-label="Love">❤️</span> but I'm also fascinated by getting my hands dirty with other technologies, as I like to learn and discover new stuff everyday.
-
-Always recommend myself to focus more on practical for making learning more effective and lean way.
-I like to dirt my hands with new technologies, languages and stuffs.
+I love thing about JavaScript, Python and Flutter <span role="img" aria-label="Love">❤️</span> but I'm also fascinated by dirting my hands with new technologies, languages and stuffs.
 
 Interested in learning more about me! — [MY RESUME](https://google.com)

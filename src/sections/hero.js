@@ -9,7 +9,7 @@ const Container = styled(Section)`
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	osition: relative;
+	position: relative;
 `
 
 const Headline = styled.h1`

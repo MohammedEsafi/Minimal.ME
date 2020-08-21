@@ -1,5 +1,4 @@
-export { default as GlobalDefaults } from './global';
-export { default as GlobalFonts } from './fonts';
+export { default as GlobalStyles } from './global';
 export { default as theme } from './theme';
 export { default as media } from './media';
 export { default as Button } from './button';

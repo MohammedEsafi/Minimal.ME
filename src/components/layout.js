@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { SEO, Header, Mode, Indicator, Footer } from '.';
-import { GlobalDefaults, GlobalFonts } from '../styles';
+import { GlobalStyles, theme } from '../styles';
 import { ThemeProvider } from 'styled-components';
-import { theme } from '../styles';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const { colors: { light, dark } } = theme;
@@ -26,7 +25,7 @@ const Layout = ({ children }) => {
   useState(() => {
     let year = (new Date()).getFullYear();
 
-    console.log(`All rights are reserved — ${year} — Made with 🖤❤️ by %cMohammed Esafi`, 'font-style: italic');
+    console.log(`All rights are reserved — ${year} — Made with 🖤 by %cMohammed Esafi`, 'font-style: italic');
 
     console.log('This website was coded using Gatsby, React, GraphQL and hosted on Netlify');
 
@@ -41,11 +40,10 @@ const Layout = ({ children }) => {
 
   return (
     <div id="root">
-      <GlobalFonts />
       {
         mounted &&
         <ThemeProvider theme={themeMode} >
-          <GlobalDefaults />
+          <GlobalStyles />
         	<SEO metadata={site.siteMetadata} />
           <Header toggleMode={toggleMode} />
           <Indicator />
