@@ -42,31 +42,46 @@ const textCenter = {
 }
 
 const List = styled.ul`
-	--foreground: ${({ theme }) => theme.primary};
-	--background: ${({ theme }) => theme.surface};
-	display: flex;
+	--primary: ${({ theme }) => theme.primary};
+	--surface: ${({ theme }) => theme.surface};
+	display: grid;
   list-style: none;
   margin: 0;
   padding: 0;
-	flex-wrap: wrap;
-	justify-content: center;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 
 	li {
 		margin: 1.8rem;
-    min-width: 34px;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
 
-		svg {
-			height: 34px;
+		span {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 40px;
+			width: 40px;
+			border-radius: 50%;
+			background-color: ${({ theme }) => theme.primary};
+
+			svg {
+				height: 20px;
+			}
 		}
 	}
 `
 
-const Item = ({ relativePath,  ...props }) => {
+const Item = ({ relativePath, name }) => {
   const svg = require(`!raw-loader!../images/${relativePath}`).default;
 
-  return <li {...props} dangerouslySetInnerHTML={{ __html: svg }}/>;
+  return (
+  	<li>
+  		<span dangerouslySetInnerHTML={{ __html: svg }} />
+  		{name}
+  	</li>
+  )
 };
 
 const About = ({ data, skills }) => {
@@ -98,7 +113,7 @@ const About = ({ data, skills }) => {
 				<p style={textCenter} >Here are a few technologies I've been working with recently</p>
 				<List>
 					{skills && skills.map(({ node }, index) => (
-						<Item key={index} relativePath={node.relativePath} />
+						<Item key={index} relativePath={node.relativePath} name={node.name.split('.')[1]} />
 					))}
 				</List>
 			</Flex>
