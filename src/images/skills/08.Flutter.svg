@@ -4,7 +4,7 @@
 	 viewBox="0 0 237.9 238" style="enable-background:new 0 0 237.9 238;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;}
-	.st1{opacity:0.72;fill: var(--surface);}
+	.st1{fill: var(--surface);}
 </style>
 <rect class="st0" width="237.9" height="237.9"/>
 <polygon class="st1" points="126.8,205.6 126.7,205.6 80.1,159 106.7,132.3 179.9,205.6 "/>

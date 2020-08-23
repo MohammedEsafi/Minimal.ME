@@ -55,10 +55,10 @@ const List = styled.ul`
     display: flex;
     flex-direction: row;
     align-items: center;
-    column-gap: 20px;
 
 		span {
 			display: flex;
+			margin-right: 20px;
 			justify-content: center;
 			align-items: center;
 			height: 40px;
