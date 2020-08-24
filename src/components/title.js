@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { css } from 'styled-components';
 import PropTypes from 'prop-types';
-import { Heading } from '../styles';
+import { Heading, Flex } from '../styles';
 import Icons from '../icons';
 
 const addCSS = css`
@@ -14,8 +14,8 @@ const addCSS = css`
 	}
 `
 
-const Title = ({ title, ariaLabel }) => (
-	<Fragment>
+const Title = ({ title, ariaLabel, align }) => (
+	<Flex alignItems={align} flexDirection='column' >
 		<Icons name='waves' side='50px auto' addCSS={addCSS} />
 		<Heading aria-label={ariaLabel}>
 			{title &&
@@ -26,12 +26,17 @@ const Title = ({ title, ariaLabel }) => (
 				))
 			}
 		</Heading>
-	</Fragment>
+	</Flex>
 )
+
+Title.defaultProps = {
+	align: 'flex-start',
+}
 
 Title.propTypes = {
 	ariaLabel: PropTypes.string.isRequired,
 	title: PropTypes.arrayOf(PropTypes.string).isRequired,
+	align: PropTypes.string,
 }
 
 export default Title;
