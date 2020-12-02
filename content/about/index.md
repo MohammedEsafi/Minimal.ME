@@ -1,5 +1,5 @@
 ---
-title: 'About'
+title: "About"
 shownTitle:
   - AB
   - OUT.
@@ -11,4 +11,4 @@ I enjoy creating things that live on the internet, whether that be websites, app
 
 I love thing about JavaScript, Python and Flutter <span role="img" aria-label="Love">❤️</span> & I like to dirt my hands with new technologies, languages and stuffs.
 
-Interested in learning more about me! — [MY RESUME](https://google.com)
+Interested in learning more about me! — [MY RESUME]()
