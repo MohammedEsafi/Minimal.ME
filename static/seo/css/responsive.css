@@ -1,0 +1,200 @@
+/* Responsive CSS Document */
+
+/* 
+    Created on   : 08/08/2017.
+    Theme Name   : Seo-master.
+    Description  : Seo-master | SEO & Business HTML Template!.
+    Version      : 1.0.
+    Author       : @TheMazine.
+    Developed by : Jubayer al hasan. (jubayer.hasan1991@gmail.com)
+   
+*/
+
+
+
+@media (min-width: 992px) {
+    .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+@media (max-width: 1199px) {
+    .shop-details .single-product-details .product-order-details {width: 100%;padding: 40px 0 0 0;}
+    #theme-main-banner .camera_caption .container p {font-size: 16px;}
+    #theme-main-banner .container .shape {
+      -webkit-transform:scale(0.7);
+              transform:scale(0.7);
+    }
+}
+/*(max-width: 1199px)*/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    header .top-header.style-two ul.float-left:before,
+    header .top-header.style-three ul.float-left:before {right: -220px;}
+    .happy-customer .wrapper {width: 85%;}
+    .pricing-plan .single-plan ul li {padding: 0 50px;}
+    .our-blog .single-post .text h4 a {font-size: 20px;}
+    .shop-details .review-tab .nav-tabs > li > a {padding: 0 25px;}
+    #theme-main-banner .camera_caption .container h1 {font-size: 45px;line-height: 55px;margin-top: 200px;}
+    #theme-main-banner .camera_caption .container p {margin: 20px 0 45px 0;}
+    .banner-one .shape1 {top: 33%;right: 32%;}
+    .banner-one .shape2 {right: -7%;}
+    .banner-one .shape3 {top: 53%;right: 12%;}
+    .banner-two .shape1 {top: 21%;right: 36%;}
+    .banner-two .shape2 {right: -15%;}
+    .banner-two .shape3 {top:82%;}
+    .banner-three .shape1 {left:0;}
+    .banner-three .shape2 {top: 19%;right: -33%;}
+    .banner-three .shape3 {top: 75%;left: -14%;}
+}
+/*(min-width: 992px) and (max-width: 1199px)*/
+
+@media (max-width: 991px) {
+    header.theme-menu-wrapper .bottom-header {padding-top: 20px;}
+    header.theme-menu-wrapper .bottom-header .container {position: relative;}
+    header.theme-menu-wrapper .logo {position: absolute;top:0;left:15px;margin: 0;z-index: 9;}
+    header .cart-button {position: absolute;top:5px;right:65px;margin: 0;z-index: 9;}
+    .theme-menu-wrapper .search-option {position: absolute;top:4px;right:110px;;z-index: 9;}
+    .theme-menu-wrapper button.search {margin: 0;}
+    #mega-menu-wrapper,.login-form form {float: none;width: 100%;}
+    header.theme-menu-wrapper nav ul>li.dropdown-holder .sub-menu:before {display: none;}
+    #mega-menu-wrapper .nav>li.active>a,#mega-menu-wrapper .nav>li:hover>a,
+    #mega-menu-wrapper .nav li.active.dropdown-holder .fa,
+    #mega-menu-wrapper .nav li.dropdown-holder:hover .fa {color: #73ce42;}
+    .short-sbout-us img {margin: 40px auto 0 auto;}
+    .we-are-here .theme-title p br {display: none;}
+    .we-are-here .theme-title p {font-size: 16px;}
+    .we-are-here [class*="col-"]>img {margin: 50px auto 0 auto;}
+    .happy-customer .wrapper {width: 100%;}
+    .theme-large-sidebar,.shop-product {margin-bottom: 80px;}
+    .blog-sidebar {margin-top: 80px;}
+    .case-study-details-two .row ul {margin-top: 0;}
+    .our-team-two .title p {width: 100%;}
+    .faq-page .single-qus h3 br,
+    #theme-main-banner .camera_caption .container h1 br {display: none;}
+}
+    
+/*(max-width: 991px)*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    header .top-header ul.float-left li {margin-right: 15px;}
+    header .top-header ul.float-right li:nth-child(2) {margin-right: 10px;}
+    header .top-header.style-two ul.float-left:before,
+    header .top-header.style-three ul.float-left:before {right:0;}
+    .short-banner h2 {font-size: 40px;}
+    .pricing-plan .single-plan ul li {padding: 0 25px;}
+    .happy-customer .wrapper:before {-webkit-transform: skew(-17deg);transform: skew(-17deg);}
+    .mixitUp-menu ul li {margin: 10px 5px;}
+    .case-study-details .statistics-one .text {padding: 35px 0 0 60px;}
+    .shop-details .review-tab .nav-tabs > li > a {padding: 0 40px;}
+    .faq-page .single-qus h3 {font-size: 20px;}
+    #theme-main-banner .camera_caption .container h1 {font-size: 35px;line-height: 45px;}
+    #theme-main-banner .camera_caption .container p {margin: 20px 0 50px 0;}
+    .banner-one .shape1 {top: 13%;right: 0;}
+    .banner-one .shape2 {right: -14%;bottom: -35%;}
+    .banner-one .shape3 {top: 59%;right: 12%;}
+    .banner-two .shape1 {top: 10%;right: 7%;}
+    .banner-two .shape2 {top: 39%;right: -44%;}
+    .banner-three .shape1 {top: 58%;left: -12%;}
+    .banner-three .shape2 {top: 27%;right: -55%;}
+}
+/*(min-width: 768px) and (max-width: 991px)*/
+
+@media (max-width: 767px) {
+    header .top-header {padding: 0;}
+    header .top-header ul {float: none;text-align: center; padding: 14px 0;}
+    header .top-header ul.float-left li {margin: 0 14px;}
+    header .top-header.style-two ul.float-left:before,header .top-header.style-three ul.float-left:before {height: 100%;top:0;right: 5px;}
+    header .top-header ul.float-right li {margin: 0 10px;}
+    .checkup-form button {width: 220px;margin: 0 auto;}
+    .theme-title h2 br,.short-banner h2 br {display: none;}
+    .short-banner h2 {font-size: 30px;}
+    .happy-customer .wrapper {padding-left: 50px;padding-right: 20px;}
+    .happy-customer .wrapper:before {width: 70px;left: -46px;-webkit-transform: skew(-10deg);transform: skew(-10deg);}
+    .happy-customer .wrapper p {font-size: 18px;}
+    .theme-menu-wrapper .search-option form.dropdown-menu {right: -95px;}
+    .content-research.bg-image .row {-webkit-transform:none;transform:none;}
+    .content-research.bg-image {margin-top: 110px;}
+    .theme-inner-banner .opacity h2 {font-size: 40px;margin-bottom: 60px;}
+    .mixitUp-menu ul li {font-size: 16px;margin: 8px 0px;}
+    .case-study-details .statistics-one img,.case-study-details .statistics-one .text {width: 100%;}
+    .case-study-details .statistics-one .text {padding: 50px 0 0 0;}
+    .theme-large-sidebar h3 br {display: none;}
+    .shop-details .review-tab .nav-tabs > li > a {padding: 0;margin: 0;font-size: 18px;}
+    .shop-details .review-tab .nav-tabs > li {width: 33.333333%;text-align: center;padding: 0 1px;}
+    .our-team-two .title h3 br {display: none;}
+    .faq-page .single-qus {padding-left: 15px;padding-right: 15px;}
+    .blog-details .post .mark-text {margin-left: 50px;}
+    #theme-main-banner .camera_caption .container h1 {font-size: 28px;line-height: 35px;margin-top: 200px;}
+    #theme-main-banner .camera_caption .container p {margin: 10px 0 30px 0;}
+    #theme-main-banner .camera_caption .container p br {display: none;}
+    #theme-main-banner .container .shape {display: none;}
+}
+/*(max-width: 767px)*/
+
+@media (max-width: 650px) {
+    #success, #error {
+        width: 86%;
+        height: auto;
+        top: calc(50% - 50px);
+        left: 7%;
+        padding: 30px 10px;
+    }
+    .happy-customer .wrapper:before {-webkit-transform: skew(-8deg);transform: skew(-8deg);}
+    footer .bottom-footer p {float: none;margin: 0 0 15px 0;text-align: center;}
+    footer .bottom-footer ul {float: none;text-align: center;}
+    footer .bottom-footer ul li a {margin: 0 6px;}
+    .theme-large-sidebar .round-chart-box {width: 100%;}
+    .shop-product .single-product .info h6 a {font-size: 16px;}
+    .shop-details .review-tab .nav-tabs > li {width: 100%;padding: 2px 0;}
+    .error-page .opacity {padding: 100px 0;}
+}
+
+@media (max-width: 600px) {
+  .faq-page .col-xs-6 {width: 100%;}
+}
+
+@media (max-width: 550px) {
+    .case-study .col-xs-6 {width: 100%;}
+    .our-blog.blogv2 .single-post .text h4 a {font-size: 20px;}
+}
+@media (max-width: 520px) {
+    .we-are-here .button-group>div {display: block;}
+    .we-are-here .button-group>div a {width: 50%;font-size: 16px;}}
+@media (max-width: 500px) {
+  .theme-title h2 {font-size: 30px;line-height: 44px;}
+  .theme-large-sidebar h3 {font-size: 28px;line-height: 40px;}
+  .shop-page .shop-product .col-xs-6 {width: 100%;}
+  .our-blog.blogv2 .single-post .text {padding-left: 15px;}
+}
+
+@media (max-width: 480px) {
+   .happy-customer .wrapper:before {-webkit-transform: skew(-7deg);transform: skew(-7deg);}
+   .shop-page .top-select-section {margin-bottom: 40px;}
+   .shop-page .top-select-section>li {float: none;margin-bottom: 30px;}
+}
+
+@media (max-width: 450px) {
+   .our-blog .single-post .text {padding-left: 10px;padding-right: 10px;}
+   .case-study-details-two .page-pagination {margin-top: 30px;}
+   .case-study-details-two .page-pagination li {width: 100%;margin-top: 20px;}
+   .case-study-details-two .page-pagination li:nth-child(1),
+   .case-study-details-two .page-pagination li:nth-child(3) {text-align: center;}
+   .shop-details .single-product-details img {width: 100%;}
+   .login-form form ul li {display: block;}
+   .login-form form ul li:nth-child(2) {margin: 25px 0;}
+   .blog-details .post .share li {width: 33.333333%;}
+}
+
+@media (max-width: 400px) {
+   header.theme-menu-wrapper .logo {width: 45%;}
+   .we-are-here ul li {font-size: 15px;}
+   .we-are-here ul li img {top:2px;}
+   .pricing-plan .single-plan ul li {padding: 0 20px;}
+   .happy-customer .wrapper:before {-webkit-transform: skew(-6deg);transform: skew(-6deg);}
+   .happy-customer .carousel-indicators  li {width: 57px;height: 57px;}
+   .our-team .col-xs-6 {width: 100%;}
+   .shop-details .single-product-details .product-order-details .clearfix ul {width: 100%;}
+   .shop-details .single-product-details .product-order-details .clearfix a {float: left;margin-top: 20px;}
+   .our-team-two .col-xs-6 {width: 100%;}
+}

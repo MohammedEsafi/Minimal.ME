@@ -1,0 +1,201 @@
+/* Responsive CSS Document */
+
+/* 
+    Created on : 07/10/2017. 
+    Theme Name : introzap .
+    Description: introzap - App Landing Page.
+    Version    : 1.1.
+    Author     : @TheMazine.
+   
+*/
+
+
+
+@media (min-width: 992px) {
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1350px) {
+  #theme-main-banner.banner-one .camera_caption .main-container>ul,
+  #theme-main-banner.banner-three .camera_caption .main-container>ul {display: none;}
+}
+@media (min-width: 992px) and (max-width: 1150px) {
+  #theme-main-banner.banner-one .camera_caption .main-container>ul,
+  #theme-main-banner.banner-three .camera_caption .main-container>ul {display: none;}
+}
+@media (max-width: 1199px) {
+  .give-your-voice .wrapper p {width: 100%;}
+  .inner-page-title p br {display: none;}
+  #theme-main-banner .camera_caption .main-container>ul {left:0;}
+}
+/*(max-width: 1199px)*/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .theme-main-menu .navbar-nav>li.shop-button {margin-left: 30px;}
+  .testimonial-section .main-wrapper p {width: 80%;}
+  .pricing-plan-style-one .main-wrapper .right-side .single-table>div {padding-left: 25px;}
+  .pricing-plan-style-one .main-wrapper .right-side .single-table:before {width: 620px;}
+  .download-free-apps .container a.iso {left:0;}
+  .download-free-apps .container a.android {right: 0;}
+  .our-blog .single-blog h6 a {font-size: 18px;}
+  .why-love-introzap .row>img {width: 50%;top:120px;}
+  .why-love-introzap img.align-left {width: 40%;bottom: 100px;}
+  .why-love-introzap {padding-bottom: 150px;}
+  .apps-intro-banner .image-box { bottom: 100px;left: -60px;width: 54%;}
+  .apps-intro-banner.space-fix .image-box {right: -60px;}
+  .testimonial-section-two .right-side {padding-top: 40px;padding-bottom: 58px;}
+  .download-free-apps.style-two .container>img {width: 40%;}
+  #theme-main-banner.banner-one .camera_caption .main-container>img {width: 45%;}
+  #theme-main-banner.banner-one .camera_caption .main-container>img {right: -25px;bottom: -50px;}
+  .home-page-two #theme-main-banner .camera_caption .main-container>img {width: 38%;}
+  #theme-main-banner.banner-three .camera_caption .main-container>img {right: 0;}
+}
+/*(min-width: 992px) and (max-width: 1199px)*/
+
+@media (max-width: 991px) {
+  .theme-main-menu .navbar-collapse.collapse {overflow-y:auto !important;}
+  .theme-main-menu .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .theme-main-menu .collapse.in{
+    display:block !important;
+  }
+  .theme-main-menu .navbar-toggle {display: block;}
+  .theme-main-menu .navbar-header {float: none;}
+  .theme-main-menu .nav>li {
+    float: none;
+    display: block;
+  }
+  .theme-main-menu.navbar .nav>li ul.sub-menu {
+    position: static;
+    width: 100%;
+    opacity: 1;
+    background: #fff;
+    visibility: visible;
+    display: none;
+    padding-left: 25px;
+    -webkit-transition: none;
+            transition: none;
+  }
+  .theme-main-header {padding-left: 15px;padding-right: 15px;padding-top: 15px;}
+  .theme-main-menu.navbar {width: 100%;}
+  .theme-main-menu.navbar .navbar-header {padding-bottom: 12px;}
+  .theme-main-menu.navbar .navbar-collapse {
+    max-height: 400px;
+    background: rgba(0,0,0,0.93);
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 9999;
+    left: 0;
+    top: 57px;
+  }
+  .theme-main-menu .navbar-nav>li>a {
+    padding: 0 15px;
+    line-height: 45px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+  }
+  .theme-main-header.fixed .theme-main-menu .navbar-nav>li>a {padding-top: 0;padding-bottom: 0;}
+  .theme-main-menu .navbar-nav>li:hover>a {padding-left: 25px;}
+  .theme-main-header li.dropdown-holder .fa {display: block;}
+  .theme-main-menu .navbar-nav>li.shop-button,
+  .theme-main-menu .navbar-nav>li.login-button {float: none;display: inline-block;margin: 0;}
+  .theme-main-menu .navbar-nav>li.shop-button a,
+  .theme-main-menu .navbar-nav>li.login-button a {margin: 10px 5px;}
+  .theme-title p br {display: none;}
+  .everything-you-need {padding-bottom: 70px;}
+  .testimonial-section .main-wrapper p,footer .subscribe-form {width: 100%;}
+  .pricing-plan-style-one .main-wrapper .right-side .single-table {margin-top: 60px;}
+  .why-love-introzap .row>img,.why-love-introzap img.align-left {display: none;}
+  .why-love-introzap .row {padding-top: 70px;}
+  .why-love-introzap {padding-bottom: 130px;}
+  .apps-intro-banner .image-box {position: relative;float: left;width: 100%;margin-top: 40px;left: auto;}
+  .apps-intro-banner .row {padding-bottom: 50px;}
+  .testimonial-section-two {margin-bottom: 100px;}
+  .pricing-plan-style-one.style-two .main-wrapper .right-side .single-table {margin-top: 0;}
+  .apps-intro-banner.space-fix .image-box {right: auto;}
+  .download-free-apps.style-two .container>img {position: static;}
+  .download-free-apps.style-two {margin-bottom: 150px;}
+  .blog-inner-page .blog-post-wrapper .single-blog-post .post {margin-top: 25px;}
+  .theme-sidebar,.contact-info .contact-address {margin-top: 80px;}
+  #theme-main-banner .camera_caption .main-container>ul,
+  #theme-main-banner .camera_caption .main-container>img {display: none;}
+  #theme-main-banner.banner-five .camera_caption .main-container>img {display: block;width: 80%;}
+  .home-page-two #theme-main-banner .camera_caption .main-container h1 {margin-top: 20px;}
+  #theme-main-banner.banner-four .camera_caption .main-container h5 {margin-top: 0;}
+}
+/*(max-width: 991px)*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .pricing-plan-style-one .main-wrapper .right-side .single-table:before {width: 809px;}
+  .download-free-apps .container a.iso {left:0;}
+  .download-free-apps .container a.android {right: 0;}
+  .download-free-apps .container>img {width: 43%;bottom: -230px;}
+  .download-free-apps {margin-bottom: 280px;}
+}
+/*(min-width: 768px) and (max-width: 991px)*/
+
+@media (max-width: 767px) {
+  .theme-main-header {padding-left: 0;padding-right: 0;}
+  .pricing-plan-style-one .main-wrapper .right-side .single-table:before,
+  .partent-logo-section h6 br {display: none;}
+  .download-free-apps .container a,.download-free-apps.style-two .container a {position: static;display: inline-block;margin: 10px 5px;}
+  .download-free-apps .theme-title {margin-bottom: 80px;}
+  .why-love-introzap:before,.apps-intro-banner:before,.platform-plan:before {left: -2%;}
+  .download-free-apps .theme-title h2 br,.blog-details .main-content-wrapper .post-meta-content h4 br,.contact-us-form br {display: none;}
+}
+/*(max-width: 767px)*/
+
+@media (max-width: 650px) {
+  #success, #error {
+    width: 84%;
+    height: auto;
+    top: calc(50% - 50px);
+    left: 8%;
+    padding: 30px 10px;
+    margin:0;
+  }
+  .testimonial-section .main-wrapper:before {height: 80%;bottom: -58%;}
+  .pricing-plan-style-one .main-wrapper .right-side .col-xs-6 {width: 100%;}
+  .blog-inner-page .blog-post-wrapper .single-blog-post .post ul li.float-right {width: 100%;}
+  .blog-inner-page .blog-post-wrapper .single-blog-post .post ul li {margin: 5px 0;}
+  #theme-main-banner .camera_caption .container h1 br {display: none;}
+  .home-page-five #theme-main-banner .camera_caption .main-container {padding-top: 0;}
+}
+@media (max-width: 600px) {
+  .give-your-voice .wrapper:before {left: -23px;}
+  .offer-banner .opacity h2 br {display: none;}
+  #theme-main-banner .camera_caption .container h1 {font-size: 38px;line-height: 48px;margin-top: 30px;}
+  #theme-main-banner .camera_caption .container p {margin-bottom: 50px;}
+}
+@media (max-width: 550px) {
+  footer .subscribe-form input[type="submit"] {position: static;display: block;margin: 25px auto 0 auto;height: 62px;}
+  footer .subscribe-form {padding-right: 0;}
+}
+@media (max-width: 450px) {
+  .download-free-apps .container>img {position: static;-webkit-transform:none;transform:none; margin: 0 auto;}
+  .download-free-apps .container {padding-bottom: 0;}
+  .download-free-apps {margin-bottom: 120px;}
+  .theme-inner-banner .opacity h2,.theme-inner-banner .opacity .check-apps {float: none;text-align: center;}
+  .theme-inner-banner .opacity .check-apps {display: block;margin: 25px auto 0 auto;}
+  .theme-inner-banner .opacity {padding-top: 70px;}
+  .blog-details .main-content-wrapper .author-text [class*="col-"] {width: 100%;}
+  .blog-details .main-content-wrapper .comment-area .reply-comment {margin-left: 10px;}
+  .blog-details .main-content-wrapper .comment-area .text span {margin: 20px 0 15px 0}
+  .blog-details .main-content-wrapper .comment-area .text button {display: block;}
+}
+@media (max-width: 420px) {
+  .pricing-plan-style-one .main-wrapper .left-side ul li {margin: 5px 0;}
+}
+
+@media (max-width: 480px) {
+  .theme-title h2 {line-height: 55px;}
+  .apps-intro-banner .image-box a {top:17%;}
+}
+@media (max-width: 380px) {
+  .pricing-plan-style-one .main-wrapper .right-side .single-table>div {padding-left: 40px;}
+}
