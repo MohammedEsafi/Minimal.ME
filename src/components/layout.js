@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { SEO, Header, Mode, Indicator, Footer } from '.';
 import { GlobalStyles, theme } from '../styles';
@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
     `
   )
 
-  useState(() => {
+  useEffect(() => {
     let year = (new Date()).getFullYear();
 
     console.log(`All rights are reserved — ${year} — Made with 🖤 by %cMohammed Esafi`, 'font-style: italic');
